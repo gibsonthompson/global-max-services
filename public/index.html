@@ -40,14 +40,9 @@ a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 button { cursor: pointer; font-family: inherit; border: none; background: none; }
 input, textarea, select { font-family: inherit; }
-.container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+.container { max-width: 1440px; margin: 0 auto; padding: 0 48px; }
 
-/* Reveal */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.reveal.vis { opacity: 1; transform: translateY(0); }
-.reveal.d1 { transition-delay: 0.1s; }
-.reveal.d2 { transition-delay: 0.2s; }
-.reveal.d3 { transition-delay: 0.3s; }
+/* Elements are visible by default — no reveal animations */
 
 /* ── TOP BAR ── */
 .top-bar {
@@ -73,7 +68,7 @@ input, textarea, select { font-family: inherit; }
   display: flex; align-items: center; justify-content: space-between;
   height: 80px;
 }
-.nav-logo { height: 60px; background: var(--white); border-radius: 6px; padding: 4px; }
+.nav-logo { height: 60px; }
 .nav-links { display: flex; gap: 2rem; align-items: center; }
 .nav-links a {
   font-size: 0.88rem; font-weight: 500; color: var(--gray-600);
@@ -127,17 +122,17 @@ input, textarea, select { font-family: inherit; }
   background: linear-gradient(to right, rgba(7,16,37,0.88) 0%, rgba(7,16,37,0.5) 60%, rgba(7,16,37,0.3) 100%);
 }
 .hero-content {
-  position: relative; z-index: 2; padding: 5rem 0; max-width: 700px;
+  position: relative; z-index: 2; padding: 5rem 0; max-width: 750px;
 }
 .hero-title {
-  font-family: var(--font-heading); font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-family: var(--font-heading); font-size: clamp(2.6rem, 5.5vw, 3.8rem);
   font-weight: 800; color: var(--white); line-height: 1.12;
-  margin-bottom: 1.2rem; text-transform: uppercase;
+  margin-bottom: 1.2rem;
 }
 .hero-title span { color: var(--amber); }
 .hero-sub {
   font-size: 1.05rem; color: rgba(255,255,255,0.75);
-  line-height: 1.7; margin-bottom: 2rem; max-width: 520px;
+  line-height: 1.7; margin-bottom: 2rem; max-width: 620px;
 }
 .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 .btn-primary {
@@ -186,7 +181,7 @@ input, textarea, select { font-family: inherit; }
 /* ── SECTION ── */
 .section { padding: clamp(3.5rem, 7vw, 6rem) 0; }
 .section-alt { background: var(--off-white); }
-.section-header { text-align: center; max-width: 720px; margin: 0 auto 3rem; }
+.section-header { text-align: center; max-width: 780px; margin: 0 auto 3rem; }
 .section-tag {
   display: inline-block; font-size: 0.72rem; font-weight: 700;
   text-transform: uppercase; letter-spacing: 0.15em; color: var(--amber);
@@ -194,7 +189,7 @@ input, textarea, select { font-family: inherit; }
 }
 .section-title {
   font-family: var(--font-heading); font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-  font-weight: 700; color: var(--navy); line-height: 1.2; text-transform: uppercase;
+  font-weight: 700; color: var(--navy); line-height: 1.2;
 }
 .section-desc { color: var(--gray-400); margin-top: 0.8rem; font-size: 1rem; }
 
@@ -203,8 +198,8 @@ input, textarea, select { font-family: inherit; }
 .about-img { border-radius: 10px; overflow: hidden; }
 .about-img img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3; }
 .about-text h3 {
-  font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700;
-  color: var(--navy); margin-bottom: 1rem; line-height: 1.2; text-transform: uppercase;
+  font-family: var(--font-heading); font-size: 2rem; font-weight: 700;
+  color: var(--navy); margin-bottom: 1rem; line-height: 1.2;
 }
 .about-text h3 span { color: var(--amber); }
 .about-text p { color: var(--gray-500); margin-bottom: 1rem; }
@@ -244,7 +239,7 @@ input, textarea, select { font-family: inherit; }
   background: var(--amber-light); display: flex; align-items: center; justify-content: center;
 }
 .svc-icon svg { width: 24px; height: 24px; color: var(--amber); }
-.svc-card h3 { font-family: var(--font-heading); font-size: 1.05rem; color: var(--navy); margin-bottom: 0.6rem; text-transform: uppercase; }
+.svc-card h3 { font-family: var(--font-heading); font-size: 1.05rem; color: var(--navy); margin-bottom: 0.6rem; }
 .svc-card p { font-size: 0.88rem; color: var(--gray-400); line-height: 1.6; }
 
 @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
@@ -304,7 +299,7 @@ input, textarea, select { font-family: inherit; }
 .form-panel.active { display: block; }
 
 .form-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
-.form-info h3 { font-family: var(--font-heading); font-size: 1.5rem; color: var(--navy); margin-bottom: 0.8rem; text-transform: uppercase; }
+.form-info h3 { font-family: var(--font-heading); font-size: 1.5rem; color: var(--navy); margin-bottom: 0.8rem; }
 .form-info p { color: var(--gray-400); margin-bottom: 2rem; }
 .form-info-list { display: flex; flex-direction: column; gap: 0.8rem; }
 .fi { display: flex; gap: 0.7rem; align-items: center; font-size: 0.9rem; color: var(--gray-500); }
@@ -368,7 +363,7 @@ input, textarea, select { font-family: inherit; }
 /* ── FOOTER ── */
 .footer { background: var(--navy-deep); padding: 2rem 0; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-.footer-logo { height: 36px; opacity: 0.5; }
+.footer-logo { height: 36px; opacity: 0.6; filter: brightness(0) invert(1); }
 .footer-text { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
 .footer-links { display: flex; gap: 1.5rem; }
 .footer-links a { font-size: 0.75rem; color: rgba(255,255,255,0.4); transition: color 0.2s; }
@@ -630,11 +625,7 @@ var slides = document.querySelectorAll('.hero-slide');
 var cs = 0;
 setInterval(function() { slides[cs].classList.remove('active'); cs = (cs+1)%slides.length; slides[cs].classList.add('active'); }, 5000);
 
-// Scroll reveal
-var ro = new IntersectionObserver(function(entries) {
-  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('vis'); });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(function(el) { ro.observe(el); });
+// Reveal animations removed — content always visible
 
 // Counters
 var co = new IntersectionObserver(function(entries) {
