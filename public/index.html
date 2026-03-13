@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Global Max Services LLC | Licensed Interstate Freight Carrier</title>
 <meta name="description" content="Global Max Services LLC — USDOT #3491280. Licensed interstate property carrier with 99 power units, 115 professional drivers, and 15M+ annual miles.">
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
@@ -39,7 +40,7 @@ a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 button { cursor: pointer; font-family: inherit; border: none; background: none; }
 input, textarea, select { font-family: inherit; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
 
 /* Reveal */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -72,7 +73,7 @@ input, textarea, select { font-family: inherit; }
   display: flex; align-items: center; justify-content: space-between;
   height: 80px;
 }
-.nav-logo { height: 60px; }
+.nav-logo { height: 60px; background: var(--white); border-radius: 6px; padding: 4px; }
 .nav-links { display: flex; gap: 2rem; align-items: center; }
 .nav-links a {
   font-size: 0.88rem; font-weight: 500; color: var(--gray-600);
@@ -112,7 +113,7 @@ input, textarea, select { font-family: inherit; }
 
 /* ── HERO ── */
 .hero {
-  position: relative; min-height: 600px; display: flex; align-items: center;
+  position: relative; min-height: 650px; display: flex; align-items: center;
   overflow: hidden; background: var(--navy-deep);
 }
 .hero-slides { position: absolute; inset: 0; }
@@ -126,12 +127,12 @@ input, textarea, select { font-family: inherit; }
   background: linear-gradient(to right, rgba(7,16,37,0.88) 0%, rgba(7,16,37,0.5) 60%, rgba(7,16,37,0.3) 100%);
 }
 .hero-content {
-  position: relative; z-index: 2; padding: 5rem 0; max-width: 620px;
+  position: relative; z-index: 2; padding: 5rem 0; max-width: 700px;
 }
 .hero-title {
-  font-family: var(--font-heading); font-size: clamp(2.2rem, 5vw, 3.4rem);
-  font-weight: 800; color: var(--white); line-height: 1.15;
-  margin-bottom: 1.2rem;
+  font-family: var(--font-heading); font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 800; color: var(--white); line-height: 1.12;
+  margin-bottom: 1.2rem; text-transform: uppercase;
 }
 .hero-title span { color: var(--amber); }
 .hero-sub {
@@ -156,6 +157,10 @@ input, textarea, select { font-family: inherit; }
 .btn-secondary:hover { background: rgba(255,255,255,0.18); }
 
 @media (max-width: 600px) {
+  .container { padding: 0 20px; }
+  .top-bar { display: none; }
+  .nav .container { height: 64px; }
+  .nav-logo { height: 48px; }
   .hero { min-height: 500px; }
   .hero-content { padding: 3rem 0; }
   .hero-btns { flex-direction: column; }
@@ -181,7 +186,7 @@ input, textarea, select { font-family: inherit; }
 /* ── SECTION ── */
 .section { padding: clamp(3.5rem, 7vw, 6rem) 0; }
 .section-alt { background: var(--off-white); }
-.section-header { text-align: center; max-width: 640px; margin: 0 auto 3rem; }
+.section-header { text-align: center; max-width: 720px; margin: 0 auto 3rem; }
 .section-tag {
   display: inline-block; font-size: 0.72rem; font-weight: 700;
   text-transform: uppercase; letter-spacing: 0.15em; color: var(--amber);
@@ -189,7 +194,7 @@ input, textarea, select { font-family: inherit; }
 }
 .section-title {
   font-family: var(--font-heading); font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-  font-weight: 700; color: var(--navy); line-height: 1.2;
+  font-weight: 700; color: var(--navy); line-height: 1.2; text-transform: uppercase;
 }
 .section-desc { color: var(--gray-400); margin-top: 0.8rem; font-size: 1rem; }
 
@@ -199,7 +204,7 @@ input, textarea, select { font-family: inherit; }
 .about-img img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3; }
 .about-text h3 {
   font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700;
-  color: var(--navy); margin-bottom: 1rem; line-height: 1.2;
+  color: var(--navy); margin-bottom: 1rem; line-height: 1.2; text-transform: uppercase;
 }
 .about-text h3 span { color: var(--amber); }
 .about-text p { color: var(--gray-500); margin-bottom: 1rem; }
@@ -239,7 +244,7 @@ input, textarea, select { font-family: inherit; }
   background: var(--amber-light); display: flex; align-items: center; justify-content: center;
 }
 .svc-icon svg { width: 24px; height: 24px; color: var(--amber); }
-.svc-card h3 { font-family: var(--font-heading); font-size: 1.05rem; color: var(--navy); margin-bottom: 0.6rem; }
+.svc-card h3 { font-family: var(--font-heading); font-size: 1.05rem; color: var(--navy); margin-bottom: 0.6rem; text-transform: uppercase; }
 .svc-card p { font-size: 0.88rem; color: var(--gray-400); line-height: 1.6; }
 
 @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
@@ -299,7 +304,7 @@ input, textarea, select { font-family: inherit; }
 .form-panel.active { display: block; }
 
 .form-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
-.form-info h3 { font-family: var(--font-heading); font-size: 1.5rem; color: var(--navy); margin-bottom: 0.8rem; }
+.form-info h3 { font-family: var(--font-heading); font-size: 1.5rem; color: var(--navy); margin-bottom: 0.8rem; text-transform: uppercase; }
 .form-info p { color: var(--gray-400); margin-bottom: 2rem; }
 .form-info-list { display: flex; flex-direction: column; gap: 0.8rem; }
 .fi { display: flex; gap: 0.7rem; align-items: center; font-size: 0.9rem; color: var(--gray-500); }
@@ -535,7 +540,7 @@ input, textarea, select { font-family: inherit; }
           <div class="form-info-list">
             <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><span>(630) 948-4754</span></div>
             <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><span>1919 S Highland Ave, Ste B201, Lombard, IL 60148</span></div>
-            <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span>dispatch@globalmaxservices.com</span></div>
+            <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="75111c06051401161d3512191a17141918140d061007031c1610065b161a18">[email&#160;protected]</a></span></div>
             <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><span>Mon-Fri 7 AM - 7 PM CST</span></div>
           </div>
         </div>
@@ -608,7 +613,7 @@ input, textarea, select { font-family: inherit; }
   <span id="toastText"></span>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 var navToggle = document.getElementById('navToggle');
 var navLinks = document.getElementById('navLinks');
 
@@ -675,8 +680,4 @@ function showToast(m){var t=document.getElementById('toast');document.getElement
 
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
-  a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-90,behavior:'smooth'});}});
-});
-</script>
-</body>
-</html>
+  a.a
