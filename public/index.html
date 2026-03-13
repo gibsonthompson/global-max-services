@@ -4,175 +4,582 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Global Max Services LLC | Licensed Interstate Freight Carrier</title>
-<meta name="description" content="Global Max Services LLC — USDOT #3491280. Licensed interstate property carrier with 99 power units, 115 professional drivers, and 15M+ annual miles. General freight, motor vehicles & heavy machinery.">
+<meta name="description" content="Global Max Services LLC — USDOT #3491280. Licensed interstate property carrier with 99 power units, 115 professional drivers, and 15M+ annual miles.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--navy:#0a0e1a;--navy-mid:#111827;--navy-light:#1a2236;--charcoal:#0d1117;--amber:#e8860c;--amber-light:#f5a623;--amber-glow:rgba(232,134,12,0.15);--white:#f8fafc;--gray-100:#e2e8f0;--gray-200:#cbd5e1;--gray-300:#94a3b8;--gray-400:#64748b;--gray-500:#475569;--success:#22c55e;--font-display:'Archivo Black',sans-serif;--font-body:'DM Sans',sans-serif;--font-mono:'Space Mono',monospace;--ease-out-expo:cubic-bezier(0.16,1,0.3,1)}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:var(--font-body);background:var(--navy);color:var(--gray-100);overflow-x:hidden;line-height:1.6}
-a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{cursor:pointer;font-family:inherit;border:none}input,textarea,select{font-family:inherit}
-.container{max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,4vw,3rem)}
-.reveal{opacity:0;transform:translateY(40px)}.reveal.active{opacity:1;transform:translateY(0);transition:opacity .8s var(--ease-out-expo),transform .8s var(--ease-out-expo)}
-.reveal-delay-1{transition-delay:.1s!important}.reveal-delay-2{transition-delay:.2s!important}.reveal-delay-3{transition-delay:.3s!important}
+/* ── RESET ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 0;transition:background .4s,padding .4s,backdrop-filter .4s}
-.nav.scrolled{background:rgba(10,14,26,.92);backdrop-filter:blur(20px);padding:.6rem 0;border-bottom:1px solid rgba(232,134,12,.1)}
-.nav .container{display:flex;align-items:center;justify-content:space-between}
-.nav-logo{height:52px;transition:height .4s;mix-blend-mode:lighten}.nav.scrolled .nav-logo{height:40px}
-.nav-links{display:flex;gap:2rem;align-items:center}
-.nav-links a{font-size:.85rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--gray-200);position:relative;padding:.3rem 0;transition:color .3s}
-.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--amber);transition:width .3s var(--ease-out-expo)}
-.nav-links a:hover{color:var(--white)}.nav-links a:hover::after{width:100%}
-.nav-cta{background:var(--amber);color:var(--navy);font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:.7rem 1.6rem;border-radius:4px;transition:all .3s}
-.nav-cta:hover{background:var(--amber-light);transform:translateY(-1px);box-shadow:0 4px 20px rgba(232,134,12,.3)}.nav-cta::after{display:none!important}
-.nav-toggle{display:none;background:none;border:none;padding:.5rem}.nav-toggle span{display:block;width:24px;height:2px;background:var(--white);margin:5px 0;transition:all .3s}
-@media(max-width:900px){.nav-toggle{display:block;z-index:1001}.nav-links{position:fixed;top:0;right:-100%;width:80%;max-width:360px;height:100vh;flex-direction:column;background:var(--navy-mid);padding:6rem 2rem 2rem;gap:1.5rem;transition:right .4s var(--ease-out-expo);border-left:1px solid rgba(232,134,12,.15)}.nav-links.open{right:0}.nav-toggle.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.nav-toggle.open span:nth-child(2){opacity:0}.nav-toggle.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}}
+:root {
+  --navy: #0a0e1a;
+  --navy-mid: #111827;
+  --navy-light: #1a2236;
+  --charcoal: #0d1117;
+  --amber: #e8860c;
+  --amber-light: #f5a623;
+  --amber-glow: rgba(232,134,12,0.15);
+  --white: #f8fafc;
+  --gray-100: #e2e8f0;
+  --gray-200: #cbd5e1;
+  --gray-300: #94a3b8;
+  --gray-400: #64748b;
+  --gray-500: #475569;
+  --success: #22c55e;
+  --font-display: 'Archivo Black', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
 
-/* HERO */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:var(--charcoal)}
-.hero-slides{position:absolute;inset:0;z-index:1}
-.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.5s ease;background-size:cover;background-position:center}
-.hero-slide.active{opacity:1}
-.hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,14,26,.92) 0%,rgba(10,14,26,.6) 50%,rgba(10,14,26,.85) 100%)}
-.hero-grid{position:absolute;inset:0;z-index:2;background-image:linear-gradient(rgba(232,134,12,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(232,134,12,.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black 30%,transparent 100%)}
-.hero-content{position:relative;z-index:3;padding:8rem 0 6rem;max-width:900px}
-.hero-badge{display:inline-flex;align-items:center;gap:.6rem;background:rgba(232,134,12,.12);border:1px solid rgba(232,134,12,.25);padding:.5rem 1.2rem;border-radius:100px;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-light);animation:fadeSlideUp .8s .4s both}
-@keyframes fadeSlideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@keyframes slideUp{from{transform:translateY(110%)}to{transform:translateY(0)}}
-.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--success);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(34,197,94,.4)}50%{opacity:.8;box-shadow:0 0 0 6px rgba(34,197,94,0)}}
-.hero-title{font-family:var(--font-display);font-size:clamp(2.8rem,7vw,5.5rem);line-height:1.05;letter-spacing:-.02em;color:var(--white);margin-top:1.5rem}
-.hero-title .line{display:block;overflow:hidden}.hero-title .line-inner{display:block;animation:slideUp 1s .6s both}.hero-title .line:nth-child(2) .line-inner{animation-delay:.75s}.hero-title .line:nth-child(3) .line-inner{animation-delay:.9s}.hero-title .accent{color:var(--amber)}
-.hero-sub{font-size:clamp(1rem,2vw,1.2rem);color:var(--gray-300);max-width:600px;margin-top:1.5rem;line-height:1.7;animation:fadeSlideUp .8s 1s both}
-.hero-actions{display:flex;gap:1rem;margin-top:2.5rem;flex-wrap:wrap;animation:fadeSlideUp .8s 1.2s both}
-.btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--amber);color:var(--navy);font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;padding:1rem 2rem;border-radius:4px;transition:all .3s;position:relative;overflow:hidden}
-.btn-primary::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s}
-.btn-primary:hover::before{left:100%}.btn-primary:hover{background:var(--amber-light);transform:translateY(-2px);box-shadow:0 8px 30px rgba(232,134,12,.3)}
-.btn-outline{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:var(--white);font-weight:600;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;padding:1rem 2rem;border-radius:4px;border:1px solid var(--gray-500);transition:all .3s}
-.btn-outline:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-2px)}
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 
-/* SECTIONS */
-section{padding:clamp(4rem,8vw,8rem) 0}
-.section-label{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
-.section-label::before{content:'';width:40px;height:1px;background:var(--amber)}
-.section-heading{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.2rem);color:var(--white);line-height:1.15;letter-spacing:-.01em}
-.section-heading .accent{color:var(--amber)}
+body {
+  font-family: var(--font-body);
+  background: var(--navy);
+  color: var(--gray-100);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
 
-/* ABOUT */
-.about{background:var(--navy)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:3rem}
-.about-text p{color:var(--gray-300);margin-bottom:1.2rem;font-size:1.05rem}
-.about-image{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:16/10}.about-image img{width:100%;height:100%;object-fit:cover}
-.about-image::after{content:'';position:absolute;inset:0;border:1px solid rgba(232,134,12,.2);border-radius:8px}
-.about-features{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
-.about-feature{display:flex;gap:.8rem;align-items:flex-start}
-.about-feature-icon{width:36px;height:36px;min-width:36px;border-radius:6px;background:var(--amber-glow);display:flex;align-items:center;justify-content:center;color:var(--amber)}
-.about-feature-icon svg{width:18px;height:18px}
-.about-feature-text h4{font-size:.9rem;font-weight:600;color:var(--white)}.about-feature-text p{font-size:.8rem;color:var(--gray-400);margin-top:.2rem}
-@media(max-width:768px){.about-grid{grid-template-columns:1fr}.about-features{grid-template-columns:1fr}}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; font-family: inherit; border: none; }
+input, textarea, select { font-family: inherit; }
 
-/* SERVICES */
-.services{background:var(--charcoal);position:relative}
-.services::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--amber),transparent);opacity:.3}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
-.service-card{background:var(--navy-light);border:1px solid rgba(255,255,255,.04);border-radius:8px;padding:2.5rem 2rem;position:relative;overflow:hidden;transition:all .4s var(--ease-out-expo)}
-.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease-out-expo)}
-.service-card:hover{transform:translateY(-4px);border-color:rgba(232,134,12,.15)}.service-card:hover::before{transform:scaleX(1)}
-.service-icon{width:56px;height:56px;border-radius:12px;margin-bottom:1.5rem;background:linear-gradient(135deg,var(--amber-glow),rgba(37,99,235,.08));display:flex;align-items:center;justify-content:center;color:var(--amber)}
-.service-icon svg{width:26px;height:26px}
-.service-card h3{font-family:var(--font-display);font-size:1.15rem;color:var(--white);margin-bottom:.8rem}
-.service-card p{color:var(--gray-400);font-size:.9rem;line-height:1.6}
-.service-tag{display:inline-block;margin-top:1.2rem;font-family:var(--font-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);border:1px solid rgba(232,134,12,.2);padding:.3rem .8rem;border-radius:3px}
-@media(max-width:900px){.services-grid{grid-template-columns:1fr}}
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
 
-/* STATS */
-.stats{background:var(--navy);position:relative;overflow:hidden;padding:clamp(3rem,6vw,5rem) 0}
-.stats::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,var(--amber-glow) 0%,transparent 50%)}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;position:relative;z-index:1}
-.stat-item{text-align:center;padding:2rem 1rem}
-.stat-number{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4rem);color:var(--white);line-height:1}
-.stat-number .suffix{color:var(--amber)}
-.stat-label{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-400);margin-top:.5rem}
-@media(max-width:768px){.stats-grid{grid-template-columns:1fr 1fr}}
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.d1 { transition-delay: 0.1s; }
+.reveal.d2 { transition-delay: 0.2s; }
+.reveal.d3 { transition-delay: 0.3s; }
 
-/* WHY */
-.why{background:var(--charcoal)}.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem}
-.why-list{display:flex;flex-direction:column;gap:1.5rem}
-.why-item{display:flex;gap:1.2rem;padding:1.5rem;background:var(--navy-light);border-radius:8px;border:1px solid transparent;transition:all .3s}
-.why-item:hover{border-color:rgba(232,134,12,.15)}
-.why-item-num{font-family:var(--font-display);font-size:1.5rem;color:var(--amber);min-width:40px}
-.why-item h4{font-size:1rem;font-weight:600;color:var(--white);margin-bottom:.3rem}.why-item p{font-size:.88rem;color:var(--gray-400)}
-.why-fmcsa{background:var(--navy-light);border-radius:12px;padding:2.5rem;border:1px solid rgba(232,134,12,.1)}
-.why-fmcsa h3{font-family:var(--font-display);font-size:1.3rem;color:var(--white);margin-bottom:1.5rem;display:flex;align-items:center;gap:.8rem}
-.fmcsa-badge{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .7rem;background:rgba(34,197,94,.1);color:var(--success);border-radius:4px;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
-.fmcsa-badge svg{width:12px;height:12px}
-.fmcsa-row{display:flex;justify-content:space-between;padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:.88rem}
-.fmcsa-row:last-child{border-bottom:none}
-.fmcsa-row .label{color:var(--gray-400)}.fmcsa-row .value{color:var(--white);font-weight:600}
-.fmcsa-row .value.highlight{color:var(--success)}.fmcsa-row .value.amber{color:var(--amber)}
-@media(max-width:768px){.why-grid{grid-template-columns:1fr}}
+/* ── KEYFRAMES ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  from { transform: translateY(110%); }
+  to { transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+}
 
-/* FORMS */
-.forms-section{background:var(--navy);position:relative}
-.forms-section::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--amber),transparent);opacity:.3}
-.form-tabs{display:flex;gap:0;margin-top:2rem;margin-bottom:2rem;background:var(--navy-light);border-radius:8px;overflow:hidden;max-width:500px;border:1px solid rgba(255,255,255,.05)}
-.form-tab{flex:1;padding:1rem 1.5rem;background:transparent;color:var(--gray-400);font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;transition:all .3s;text-align:center;display:inline-flex;align-items:center;justify-content:center;gap:.6rem}
-.form-tab svg{width:16px;height:16px}.form-tab.active{background:var(--amber);color:var(--navy)}.form-tab.active svg{stroke:var(--navy)}
-.form-tab:hover:not(.active){color:var(--white)}
-.form-panel{display:none}.form-panel.active{display:block}
-.form-container{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.form-info h3{font-family:var(--font-display);font-size:1.5rem;color:var(--white);margin-bottom:1rem}
-.form-info p{color:var(--gray-300);margin-bottom:2rem}
-.form-info-list{display:flex;flex-direction:column;gap:1rem}
-.form-info-item{display:flex;gap:.8rem;align-items:center;font-size:.9rem;color:var(--gray-300)}
-.form-info-item .icon{width:32px;height:32px;min-width:32px;border-radius:6px;background:var(--amber-glow);display:flex;align-items:center;justify-content:center;color:var(--amber)}
-.form-info-item .icon svg{width:15px;height:15px}
-.form-card{background:var(--navy-light);border-radius:12px;padding:2.5rem;border:1px solid rgba(255,255,255,.05)}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}.form-row.full{grid-template-columns:1fr}
-.form-group{display:flex;flex-direction:column;gap:.4rem}
-.form-group label{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-400)}
-.form-group input,.form-group textarea,.form-group select{background:var(--navy);border:1px solid rgba(255,255,255,.08);color:var(--white);padding:.8rem 1rem;border-radius:6px;font-size:.9rem;transition:border-color .3s;outline:none}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--amber)}
-.form-group textarea{resize:vertical;min-height:100px}.form-group select{cursor:pointer}.form-group select option{background:var(--navy);color:var(--white)}
-.form-submit{width:100%;margin-top:1rem;padding:1rem;background:var(--amber);color:var(--navy);font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:.08em;border-radius:6px;transition:all .3s}
-.form-submit:hover{background:var(--amber-light);transform:translateY(-1px)}
-.form-success{display:none;text-align:center;padding:3rem 2rem}.form-success.show{display:block}
-.form-success .check{width:60px;height:60px;border-radius:50%;margin:0 auto 1rem;background:rgba(34,197,94,.15);display:flex;align-items:center;justify-content:center;color:var(--success)}
-.form-success .check svg{width:28px;height:28px}
-.form-success h4{font-family:var(--font-display);color:var(--white);margin-bottom:.5rem}.form-success p{color:var(--gray-400);font-size:.9rem}
-@media(max-width:768px){.form-container{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+/* ── SCROLL PROGRESS ── */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; height: 3px; z-index: 10000;
+  background: linear-gradient(90deg, var(--amber), var(--amber-light));
+  width: 0%;
+}
 
-/* CONTACT */
-.contact-bar{background:var(--charcoal);padding:4rem 0;border-top:1px solid rgba(255,255,255,.04)}
-.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
-.contact-card{text-align:center;padding:2rem}
-.contact-card-icon{width:48px;height:48px;margin:0 auto 1rem;border-radius:10px;background:var(--amber-glow);display:flex;align-items:center;justify-content:center;color:var(--amber)}
-.contact-card-icon svg{width:22px;height:22px}
-.contact-card h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-400);margin-bottom:.5rem}
-.contact-card p{color:var(--white);font-size:1.05rem;font-weight:600}
-.contact-card a{color:var(--white);transition:color .3s}.contact-card a:hover{color:var(--amber)}
-@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+/* ══════════════════════════════════════════
+   NAVIGATION
+   ══════════════════════════════════════════ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 1.2rem 0;
+  transition: background 0.4s, padding 0.4s, backdrop-filter 0.4s;
+}
+.nav.scrolled {
+  background: rgba(10, 14, 26, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(232, 134, 12, 0.1);
+}
+.nav .container {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  height: 80px;
+  transition: height 0.4s;
+  filter: drop-shadow(0 0 0 transparent);
+}
+.nav.scrolled .nav-logo { height: 56px; }
 
-/* FOOTER */
-.footer{background:var(--charcoal);padding:3rem 0;border-top:1px solid rgba(255,255,255,.04)}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-logo{height:36px;opacity:.6;mix-blend-mode:lighten}.footer-text{font-size:.8rem;color:var(--gray-500)}
-.footer-links{display:flex;gap:1.5rem}
-.footer-links a{font-size:.78rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:.06em;transition:color .3s}.footer-links a:hover{color:var(--amber)}
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a {
+  font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--gray-200);
+  position: relative; padding: 0.3rem 0; transition: color 0.3s;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: 0; left: 0;
+  width: 0; height: 2px; background: var(--amber);
+  transition: width 0.3s var(--ease);
+}
+.nav-links a:hover { color: var(--white); }
+.nav-links a:hover::after { width: 100%; }
 
-/* TOAST */
-.toast{position:fixed;bottom:2rem;right:2rem;z-index:9999;background:var(--navy-light);border:1px solid rgba(34,197,94,.3);padding:1rem 1.5rem;border-radius:8px;min-width:300px;transform:translateY(120%);transition:transform .4s var(--ease-out-expo);display:flex;align-items:center;gap:.8rem;box-shadow:0 10px 40px rgba(0,0,0,.4)}
-.toast.show{transform:translateY(0)}.toast-icon{display:flex}.toast-icon svg{width:20px;height:20px}
-.toast-text{font-size:.85rem;color:var(--gray-200)}
-.scroll-progress{position:fixed;top:0;left:0;height:3px;z-index:10000;background:linear-gradient(90deg,var(--amber),var(--amber-light));width:0%;transition:width .1s}
+.nav-cta {
+  background: var(--amber); color: var(--navy); font-weight: 700;
+  font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.7rem 1.6rem; border-radius: 4px; transition: all 0.3s;
+}
+.nav-cta:hover {
+  background: var(--amber-light); transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(232,134,12,0.3);
+}
+.nav-cta::after { display: none !important; }
+
+/* Mobile nav */
+.nav-toggle { display: none; background: none; padding: 0.5rem; }
+.nav-toggle span {
+  display: block; width: 26px; height: 2px;
+  background: var(--white); margin: 6px 0; transition: all 0.3s;
+}
+
+@media (max-width: 900px) {
+  .nav-toggle { display: block; z-index: 1001; }
+  .nav-links {
+    position: fixed; top: 0; right: -100%; width: 80%; max-width: 360px;
+    height: 100vh; flex-direction: column; background: var(--navy-mid);
+    padding: 6rem 2rem 2rem; gap: 1.5rem;
+    transition: right 0.4s var(--ease);
+    border-left: 1px solid rgba(232,134,12,0.15);
+  }
+  .nav-links.open { right: 0; }
+  .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+}
+
+@media (max-width: 600px) {
+  .nav-logo { height: 60px; }
+  .nav.scrolled .nav-logo { height: 44px; }
+}
+
+/* ══════════════════════════════════════════
+   HERO
+   ══════════════════════════════════════════ */
+.hero {
+  position: relative; min-height: 100vh; display: flex;
+  align-items: center; overflow: hidden; background: var(--charcoal);
+}
+.hero-slides { position: absolute; inset: 0; z-index: 1; }
+.hero-slide {
+  position: absolute; inset: 0; opacity: 0; transition: opacity 1.5s ease;
+  background-size: cover; background-position: center;
+}
+.hero-slide.active { opacity: 1; }
+.hero-slide::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(10,14,26,0.93) 0%, rgba(10,14,26,0.55) 50%, rgba(10,14,26,0.88) 100%);
+}
+.hero-grid {
+  position: absolute; inset: 0; z-index: 2;
+  background-image:
+    linear-gradient(rgba(232,134,12,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232,134,12,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 30%, transparent 100%);
+}
+.hero-content {
+  position: relative; z-index: 3; padding: 10rem 0 6rem; max-width: 900px;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: rgba(232,134,12,0.12); border: 1px solid rgba(232,134,12,0.25);
+  padding: 0.5rem 1.2rem; border-radius: 100px;
+  font-family: var(--font-mono); font-size: 0.7rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber-light);
+  animation: fadeUp 0.8s 0.3s both;
+}
+.hero-badge .dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--success); animation: pulse 2s infinite;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 7vw, 5.5rem);
+  line-height: 1.05; letter-spacing: -0.02em;
+  color: var(--white); margin-top: 1.5rem;
+}
+.hero-title .line { display: block; overflow: hidden; }
+.hero-title .line-inner {
+  display: block; animation: slideUp 0.9s 0.5s both;
+}
+.hero-title .line:nth-child(2) .line-inner { animation-delay: 0.65s; }
+.hero-title .line:nth-child(3) .line-inner { animation-delay: 0.8s; }
+.hero-title .accent { color: var(--amber); }
+
+.hero-sub {
+  font-size: clamp(0.95rem, 2vw, 1.15rem); color: var(--gray-300);
+  max-width: 600px; margin-top: 1.5rem; line-height: 1.7;
+  animation: fadeUp 0.8s 0.9s both;
+}
+.hero-actions {
+  display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;
+  animation: fadeUp 0.8s 1.1s both;
+}
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--amber); color: var(--navy); font-weight: 700;
+  font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 1rem 2rem; border-radius: 4px; transition: all 0.3s;
+  position: relative; overflow: hidden;
+}
+.btn-primary::before {
+  content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+.btn-primary:hover::before { left: 100%; }
+.btn-primary:hover {
+  background: var(--amber-light); transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(232,134,12,0.3);
+}
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: transparent; color: var(--white); font-weight: 600;
+  font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 1rem 2rem; border-radius: 4px; border: 1px solid var(--gray-500);
+  transition: all 0.3s;
+}
+.btn-outline:hover { border-color: var(--amber); color: var(--amber); transform: translateY(-2px); }
+
+@media (max-width: 600px) {
+  .hero-content { padding: 8rem 0 4rem; }
+  .hero-actions { flex-direction: column; }
+  .btn-primary, .btn-outline { width: 100%; justify-content: center; }
+}
+
+/* ══════════════════════════════════════════
+   SECTION SHARED
+   ══════════════════════════════════════════ */
+section { padding: clamp(4rem, 8vw, 7rem) 0; }
+
+.section-label {
+  font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--amber);
+  display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;
+}
+.section-label::before {
+  content: ''; width: 40px; height: 1px; background: var(--amber);
+}
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: var(--white); line-height: 1.15;
+}
+.section-heading .accent { color: var(--amber); }
+
+/* ══════════════════════════════════════════
+   ABOUT
+   ══════════════════════════════════════════ */
+.about { background: var(--navy); }
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; align-items: center; margin-top: 3rem;
+}
+.about-text p { color: var(--gray-300); margin-bottom: 1.2rem; font-size: 1.05rem; }
+.about-image {
+  position: relative; border-radius: 8px; overflow: hidden; aspect-ratio: 16/10;
+}
+.about-image img { width: 100%; height: 100%; object-fit: cover; }
+
+.about-features {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem;
+}
+.about-feature { display: flex; gap: 0.8rem; align-items: flex-start; }
+.about-feature-icon {
+  width: 36px; height: 36px; min-width: 36px; border-radius: 6px;
+  background: var(--amber-glow); display: flex; align-items: center;
+  justify-content: center; color: var(--amber);
+}
+.about-feature-icon svg { width: 18px; height: 18px; }
+.about-feature-text h4 { font-size: 0.9rem; font-weight: 600; color: var(--white); }
+.about-feature-text p { font-size: 0.8rem; color: var(--gray-400); margin-top: 0.2rem; }
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-features { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════════════
+   SERVICES
+   ══════════════════════════════════════════ */
+.services { background: var(--charcoal); position: relative; }
+.services::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--amber), transparent);
+  opacity: 0.3;
+}
+.services-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem;
+}
+.service-card {
+  background: var(--navy-light); border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 8px; padding: 2.5rem 2rem; position: relative;
+  overflow: hidden; transition: all 0.4s var(--ease);
+}
+.service-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--amber); transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+.service-card:hover { transform: translateY(-4px); border-color: rgba(232,134,12,0.15); }
+.service-card:hover::before { transform: scaleX(1); }
+.service-icon {
+  width: 56px; height: 56px; border-radius: 12px; margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--amber-glow), rgba(37,99,235,0.08));
+  display: flex; align-items: center; justify-content: center; color: var(--amber);
+}
+.service-icon svg { width: 26px; height: 26px; }
+.service-card h3 {
+  font-family: var(--font-display); font-size: 1.1rem; color: var(--white);
+  margin-bottom: 0.8rem;
+}
+.service-card p { color: var(--gray-400); font-size: 0.9rem; line-height: 1.6; }
+.service-tag {
+  display: inline-block; margin-top: 1.2rem; font-family: var(--font-mono);
+  font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--amber); border: 1px solid rgba(232,134,12,0.2);
+  padding: 0.3rem 0.8rem; border-radius: 3px;
+}
+
+@media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
+
+/* ══════════════════════════════════════════
+   STATS
+   ══════════════════════════════════════════ */
+.stats {
+  background: var(--navy); position: relative; overflow: hidden;
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+.stats::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, var(--amber-glow) 0%, transparent 50%);
+}
+.stats-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;
+  position: relative; z-index: 1;
+}
+.stat-item { text-align: center; padding: 2rem 1rem; }
+.stat-number {
+  font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--white); line-height: 1;
+}
+.stat-number .suffix { color: var(--amber); }
+.stat-label {
+  font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--gray-400); margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) { .stats-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .stats-grid { grid-template-columns: 1fr; } }
+
+/* ══════════════════════════════════════════
+   WHY CHOOSE US
+   ══════════════════════════════════════════ */
+.why { background: var(--charcoal); }
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
+.why-list { display: flex; flex-direction: column; gap: 1.5rem; }
+.why-item {
+  display: flex; gap: 1.2rem; padding: 1.5rem; background: var(--navy-light);
+  border-radius: 8px; border: 1px solid transparent; transition: all 0.3s;
+}
+.why-item:hover { border-color: rgba(232,134,12,0.15); }
+.why-item-num { font-family: var(--font-display); font-size: 1.5rem; color: var(--amber); min-width: 40px; }
+.why-item h4 { font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 0.3rem; }
+.why-item p { font-size: 0.88rem; color: var(--gray-400); }
+
+.why-fmcsa {
+  background: var(--navy-light); border-radius: 12px; padding: 2rem;
+  border: 1px solid rgba(232,134,12,0.1);
+}
+.why-fmcsa h3 {
+  font-family: var(--font-display); font-size: 1.2rem; color: var(--white);
+  margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.8rem;
+}
+.fmcsa-badge {
+  display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.3rem 0.7rem;
+  background: rgba(34,197,94,0.1); color: var(--success); border-radius: 4px;
+  font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.fmcsa-badge svg { width: 12px; height: 12px; }
+.fmcsa-row {
+  display: flex; justify-content: space-between; padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.85rem;
+}
+.fmcsa-row:last-child { border-bottom: none; }
+.fmcsa-row .label { color: var(--gray-400); }
+.fmcsa-row .value { color: var(--white); font-weight: 600; text-align: right; }
+.fmcsa-row .value.highlight { color: var(--success); }
+.fmcsa-row .value.amber { color: var(--amber); }
+
+@media (max-width: 768px) {
+  .why-grid { grid-template-columns: 1fr; }
+  .fmcsa-row { font-size: 0.78rem; gap: 0.5rem; }
+}
+
+/* ══════════════════════════════════════════
+   FORMS
+   ══════════════════════════════════════════ */
+.forms-section { background: var(--navy); position: relative; }
+.forms-section::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--amber), transparent); opacity: 0.3;
+}
+.form-tabs {
+  display: flex; margin-top: 2rem; margin-bottom: 2rem;
+  background: var(--navy-light); border-radius: 8px; overflow: hidden;
+  max-width: 500px; border: 1px solid rgba(255,255,255,0.05);
+}
+.form-tab {
+  flex: 1; padding: 1rem 1.5rem; background: transparent; color: var(--gray-400);
+  font-weight: 600; font-size: 0.82rem; text-transform: uppercase;
+  letter-spacing: 0.06em; transition: all 0.3s; text-align: center;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+}
+.form-tab svg { width: 16px; height: 16px; }
+.form-tab.active { background: var(--amber); color: var(--navy); }
+.form-tab.active svg { stroke: var(--navy); }
+.form-tab:hover:not(.active) { color: var(--white); }
+
+.form-panel { display: none; }
+.form-panel.active { display: block; }
+
+.form-container { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.form-info h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--white); margin-bottom: 1rem; }
+.form-info p { color: var(--gray-300); margin-bottom: 2rem; font-size: 0.95rem; }
+.form-info-list { display: flex; flex-direction: column; gap: 1rem; }
+.form-info-item { display: flex; gap: 0.8rem; align-items: center; font-size: 0.9rem; color: var(--gray-300); }
+.form-info-item .icon {
+  width: 32px; height: 32px; min-width: 32px; border-radius: 6px;
+  background: var(--amber-glow); display: flex; align-items: center;
+  justify-content: center; color: var(--amber);
+}
+.form-info-item .icon svg { width: 15px; height: 15px; }
+
+.form-card {
+  background: var(--navy-light); border-radius: 12px; padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.form-row.full { grid-template-columns: 1fr; }
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-group label {
+  font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--gray-400);
+}
+.form-group input, .form-group textarea, .form-group select {
+  background: var(--navy); border: 1px solid rgba(255,255,255,0.08);
+  color: var(--white); padding: 0.75rem 1rem; border-radius: 6px;
+  font-size: 0.9rem; transition: border-color 0.3s; outline: none;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+  border-color: var(--amber);
+}
+.form-group textarea { resize: vertical; min-height: 90px; }
+.form-group select { cursor: pointer; }
+.form-group select option { background: var(--navy); color: var(--white); }
+.form-submit {
+  width: 100%; margin-top: 1rem; padding: 1rem;
+  background: var(--amber); color: var(--navy); font-weight: 700;
+  font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.08em;
+  border-radius: 6px; transition: all 0.3s;
+}
+.form-submit:hover { background: var(--amber-light); transform: translateY(-1px); }
+
+.form-success { display: none; text-align: center; padding: 3rem 2rem; }
+.form-success.show { display: block; }
+.form-success .check {
+  width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 1rem;
+  background: rgba(34,197,94,0.15); display: flex; align-items: center;
+  justify-content: center; color: var(--success);
+}
+.form-success .check svg { width: 28px; height: 28px; }
+.form-success h4 { font-family: var(--font-display); color: var(--white); margin-bottom: 0.5rem; }
+.form-success p { color: var(--gray-400); font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+  .form-container { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .form-tabs { max-width: 100%; }
+}
+
+/* ══════════════════════════════════════════
+   CONTACT & FOOTER
+   ══════════════════════════════════════════ */
+.contact-bar {
+  background: var(--charcoal); padding: 4rem 0;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.contact-card { text-align: center; padding: 2rem 1rem; }
+.contact-card-icon {
+  width: 48px; height: 48px; margin: 0 auto 1rem; border-radius: 10px;
+  background: var(--amber-glow); display: flex; align-items: center;
+  justify-content: center; color: var(--amber);
+}
+.contact-card-icon svg { width: 22px; height: 22px; }
+.contact-card h4 {
+  font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--gray-400); margin-bottom: 0.5rem;
+}
+.contact-card p { color: var(--white); font-size: 1rem; font-weight: 600; }
+.contact-card a { color: var(--white); transition: color 0.3s; }
+.contact-card a:hover { color: var(--amber); }
+
+@media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+
+.footer {
+  background: var(--charcoal); padding: 2.5rem 0;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+.footer-inner {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem;
+}
+.footer-logo {
+  height: 36px; opacity: 0.5;
+  filter: drop-shadow(0 0 0 transparent);
+}
+.footer-text { font-size: 0.78rem; color: var(--gray-500); }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a {
+  font-size: 0.75rem; color: var(--gray-400); text-transform: uppercase;
+  letter-spacing: 0.06em; transition: color 0.3s;
+}
+.footer-links a:hover { color: var(--amber); }
+
+@media (max-width: 600px) {
+  .footer-inner { flex-direction: column; text-align: center; }
+}
+
+/* Toast */
+.toast {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 9999;
+  background: var(--navy-light); border: 1px solid rgba(34,197,94,0.3);
+  padding: 1rem 1.5rem; border-radius: 8px; min-width: 280px;
+  transform: translateY(120%); transition: transform 0.4s var(--ease);
+  display: flex; align-items: center; gap: 0.8rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+.toast.show { transform: translateY(0); }
+.toast-icon svg { width: 20px; height: 20px; }
+.toast-text { font-size: 0.85rem; color: var(--gray-200); }
 </style>
 </head>
 <body>
+
 <div class="scroll-progress" id="scrollProgress"></div>
 
+<!-- NAV -->
 <nav class="nav" id="mainNav">
   <div class="container">
     <a href="#"><img src="images/logo.png" alt="Global Max Services LLC" class="nav-logo"></a>
@@ -187,6 +594,7 @@ section{padding:clamp(4rem,8vw,8rem) 0}
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-slides">
     <div class="hero-slide active" style="background-image:url('images/hero-warehouse.png')"></div>
@@ -211,142 +619,117 @@ section{padding:clamp(4rem,8vw,8rem) 0}
   </div>
 </section>
 
+<!-- ABOUT -->
 <section class="about" id="about">
   <div class="container">
     <div class="section-label reveal">Who We Are</div>
-    <h2 class="section-heading reveal reveal-delay-1">The Backbone of <span class="accent">American Freight</span></h2>
+    <h2 class="section-heading reveal d1">The Backbone of <span class="accent">American Freight</span></h2>
     <div class="about-grid">
-      <div class="about-text reveal reveal-delay-2">
-        <p>Global Max Services LLC is a federally authorized interstate property carrier headquartered in Lombard, Illinois. We operate a modern fleet of 99 power units staffed by 115 professional drivers, logging over 15 million miles annually across the continental United States.</p>
-        <p>Our authority covers general freight, motor vehicle transport, and oversized machinery and large object hauling — making us a versatile partner for shippers who need reliability at scale, not just capacity.</p>
+      <div class="about-text">
+        <p class="reveal d2">Global Max Services LLC is a federally authorized interstate property carrier headquartered in Lombard, Illinois. We operate a modern fleet of 99 power units staffed by 115 professional drivers, logging over 15 million miles annually across the continental United States.</p>
+        <p class="reveal d3">Our authority covers general freight, motor vehicle transport, and oversized machinery and large object hauling — making us a versatile partner for shippers who need reliability at scale, not just capacity.</p>
         <div class="about-features">
-          <div class="about-feature">
-            <div class="about-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-            <div class="about-feature-text"><h4>FMCSA Compliant</h4><p>Full federal authority, current insurance, biennial updates filed.</p></div>
-          </div>
-          <div class="about-feature">
-            <div class="about-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-            <div class="about-feature-text"><h4>Real-Time Tracking</h4><p>GPS-enabled fleet with ELD compliance across all units.</p></div>
-          </div>
-          <div class="about-feature">
-            <div class="about-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-            <div class="about-feature-text"><h4>48-State Coverage</h4><p>Interstate authority with nationwide reach and capacity.</p></div>
-          </div>
-          <div class="about-feature">
-            <div class="about-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-            <div class="about-feature-text"><h4>Driver Safety Leader</h4><p>1.8% driver OOS rate — well below 6.67% national average.</p></div>
-          </div>
+          <div class="about-feature reveal"><div class="about-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div class="about-feature-text"><h4>FMCSA Compliant</h4><p>Full federal authority, current insurance, biennial updates filed.</p></div></div>
+          <div class="about-feature reveal d1"><div class="about-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="about-feature-text"><h4>Real-Time Tracking</h4><p>GPS-enabled fleet with ELD compliance across all units.</p></div></div>
+          <div class="about-feature reveal d2"><div class="about-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div class="about-feature-text"><h4>48-State Coverage</h4><p>Interstate authority with nationwide reach and capacity.</p></div></div>
+          <div class="about-feature reveal d3"><div class="about-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="about-feature-text"><h4>Driver Safety Leader</h4><p>1.8% driver OOS rate — well below 6.67% national average.</p></div></div>
         </div>
       </div>
-      <div class="about-image reveal reveal-delay-3"><img src="images/hero-port.png" alt="Global Max Services freight operations at port" loading="lazy"></div>
+      <div class="about-image reveal d2"><img src="images/hero-port.png" alt="Global Max Services freight operations" loading="lazy"></div>
     </div>
   </div>
 </section>
 
+<!-- SERVICES -->
 <section class="services" id="services">
   <div class="container">
     <div class="section-label reveal">What We Move</div>
-    <h2 class="section-heading reveal reveal-delay-1">Freight Services Built for <span class="accent">Scale</span></h2>
+    <h2 class="section-heading reveal d1">Freight Services Built for <span class="accent">Scale</span></h2>
     <div class="services-grid">
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
-        <h3>General Freight</h3><p>Full truckload and partial capacity for palletized goods, retail inventory, manufacturing supplies, and commercial shipments moving coast-to-coast on tight schedules.</p><span class="service-tag">FTL &middot; LTL</span>
-      </div>
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-        <h3>Motor Vehicle Transport</h3><p>Licensed carrier for automobile and vehicle transport. We move cars, trucks, and fleet vehicles for dealerships, auctions, manufacturers, and private shippers.</p><span class="service-tag">Auto Hauling</span>
-      </div>
-      <div class="service-card reveal reveal-delay-3">
-        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-        <h3>Machinery &amp; Oversize</h3><p>Heavy equipment, industrial machinery, and large objects requiring specialized handling. Experienced in oversized load logistics and route planning.</p><span class="service-tag">Heavy Haul</span>
-      </div>
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-        <h3>Dedicated Routes</h3><p>Consistent, high-frequency lane coverage for shippers needing dependable capacity on their most critical routes, every week, no exceptions.</p><span class="service-tag">Contract Lanes</span>
-      </div>
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg></div>
-        <h3>Logistics Coordination</h3><p>End-to-end shipment management from dispatch to delivery. Real-time visibility, proactive communication, and detailed documentation on every load.</p><span class="service-tag">Full Service</span>
-      </div>
-      <div class="service-card reveal reveal-delay-3">
-        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <h3>Expedited Freight</h3><p>Time-critical shipments that can't wait. Team drivers, dedicated equipment, and priority routing to meet your most urgent delivery windows.</p><span class="service-tag">Hot Shot</span>
-      </div>
+      <div class="service-card reveal"><div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h3>General Freight</h3><p>Full truckload and partial capacity for palletized goods, retail inventory, manufacturing supplies, and commercial shipments moving coast-to-coast.</p><span class="service-tag">FTL &middot; LTL</span></div>
+      <div class="service-card reveal d1"><div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3>Motor Vehicle Transport</h3><p>Licensed carrier for automobile and vehicle transport — cars, trucks, and fleet vehicles for dealerships, auctions, and manufacturers.</p><span class="service-tag">Auto Hauling</span></div>
+      <div class="service-card reveal d2"><div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>Machinery &amp; Oversize</h3><p>Heavy equipment, industrial machinery, and large objects requiring specialized handling and oversized load route planning.</p><span class="service-tag">Heavy Haul</span></div>
+      <div class="service-card reveal"><div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Dedicated Routes</h3><p>Consistent, high-frequency lane coverage for shippers needing dependable capacity on their most critical routes every week.</p><span class="service-tag">Contract Lanes</span></div>
+      <div class="service-card reveal d1"><div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg></div><h3>Logistics Coordination</h3><p>End-to-end shipment management from dispatch to delivery with real-time visibility and documentation on every load.</p><span class="service-tag">Full Service</span></div>
+      <div class="service-card reveal d2"><div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3>Expedited Freight</h3><p>Time-critical shipments that can't wait. Team drivers, dedicated equipment, and priority routing for urgent delivery windows.</p><span class="service-tag">Hot Shot</span></div>
     </div>
   </div>
 </section>
 
+<!-- STATS -->
 <section class="stats" id="stats">
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item reveal"><div class="stat-number"><span class="counter" data-target="99">0</span><span class="suffix">+</span></div><div class="stat-label">Power Units</div></div>
-      <div class="stat-item reveal reveal-delay-1"><div class="stat-number"><span class="counter" data-target="15">0</span><span class="suffix">M mi</span></div><div class="stat-label">Annual Miles Logged</div></div>
-      <div class="stat-item reveal reveal-delay-2"><div class="stat-number"><span class="counter" data-target="115">0</span><span class="suffix">+</span></div><div class="stat-label">Professional Drivers</div></div>
-      <div class="stat-item reveal reveal-delay-3"><div class="stat-number"><span class="counter" data-target="48">0</span><span class="suffix"> States</span></div><div class="stat-label">Interstate Coverage</div></div>
+      <div class="stat-item reveal d1"><div class="stat-number"><span class="counter" data-target="15">0</span><span class="suffix">M mi</span></div><div class="stat-label">Annual Miles Logged</div></div>
+      <div class="stat-item reveal d2"><div class="stat-number"><span class="counter" data-target="115">0</span><span class="suffix">+</span></div><div class="stat-label">Professional Drivers</div></div>
+      <div class="stat-item reveal d3"><div class="stat-number"><span class="counter" data-target="48">0</span><span class="suffix"> States</span></div><div class="stat-label">Interstate Coverage</div></div>
     </div>
   </div>
 </section>
 
+<!-- WHY -->
 <section class="why" id="why">
   <div class="container">
     <div class="section-label reveal">Why Global Max</div>
-    <h2 class="section-heading reveal reveal-delay-1">Federal Authority. <span class="accent">Proven Record.</span></h2>
+    <h2 class="section-heading reveal d1">Federal Authority. <span class="accent">Proven Record.</span></h2>
     <div class="why-grid">
       <div class="why-list">
         <div class="why-item reveal"><div class="why-item-num">01</div><div><h4>Elite Driver Safety Record</h4><p>Our 1.8% driver out-of-service rate is nearly 4x better than the 6.67% national average — a direct reflection of our hiring, training, and compliance standards.</p></div></div>
-        <div class="why-item reveal reveal-delay-1"><div class="why-item-num">02</div><div><h4>Active Federal Authority</h4><p>USDOT #3491280 with MC-1149138 operating authority. Fully authorized for interstate, for-hire property transport across 48 states.</p></div></div>
-        <div class="why-item reveal reveal-delay-2"><div class="why-item-num">03</div><div><h4>Scale &amp; Capacity</h4><p>With 99 power units and 115 drivers, we have the capacity to handle your freight — whether it's a single load or a multi-truck dedicated contract.</p></div></div>
-        <div class="why-item reveal reveal-delay-3"><div class="why-item-num">04</div><div><h4>Diverse Cargo Capability</h4><p>Authorized for general freight, motor vehicles, and machinery/large objects — covering a wide range of shipper needs under one carrier.</p></div></div>
+        <div class="why-item reveal d1"><div class="why-item-num">02</div><div><h4>Active Federal Authority</h4><p>USDOT #3491280 with MC-1149138 operating authority. Fully authorized for interstate, for-hire property transport across 48 states.</p></div></div>
+        <div class="why-item reveal d2"><div class="why-item-num">03</div><div><h4>Scale &amp; Capacity</h4><p>With 99 power units and 115 drivers, we have the capacity to handle your freight — whether it's a single load or a multi-truck dedicated contract.</p></div></div>
+        <div class="why-item reveal d3"><div class="why-item-num">04</div><div><h4>Diverse Cargo Capability</h4><p>Authorized for general freight, motor vehicles, and machinery/large objects — covering a wide range of shipper needs under one carrier.</p></div></div>
       </div>
-      <div class="why-fmcsa reveal reveal-delay-2">
+      <div class="why-fmcsa reveal d1">
         <h3>FMCSA Snapshot <span class="fmcsa-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Verified</span></h3>
         <div class="fmcsa-row"><span class="label">USDOT Number</span><span class="value">3491280</span></div>
         <div class="fmcsa-row"><span class="label">MC Number</span><span class="value">MC-1149138</span></div>
         <div class="fmcsa-row"><span class="label">Entity Type</span><span class="value">Carrier</span></div>
         <div class="fmcsa-row"><span class="label">USDOT Status</span><span class="value highlight">ACTIVE</span></div>
         <div class="fmcsa-row"><span class="label">Operating Authority</span><span class="value highlight">Authorized — Property</span></div>
-        <div class="fmcsa-row"><span class="label">Operation Classification</span><span class="value">Auth. For Hire, Interstate</span></div>
+        <div class="fmcsa-row"><span class="label">Classification</span><span class="value">Auth. For Hire, Interstate</span></div>
         <div class="fmcsa-row"><span class="label">Power Units</span><span class="value amber">99</span></div>
         <div class="fmcsa-row"><span class="label">Drivers</span><span class="value amber">115</span></div>
         <div class="fmcsa-row"><span class="label">MCS-150 Mileage (2025)</span><span class="value amber">15,000,000</span></div>
         <div class="fmcsa-row"><span class="label">Total Inspections (24 mo)</span><span class="value">272</span></div>
-        <div class="fmcsa-row"><span class="label">Driver OOS Rate</span><span class="value highlight">1.8% (Nat'l Avg: 6.67%)</span></div>
+        <div class="fmcsa-row"><span class="label">Driver OOS Rate</span><span class="value highlight">1.8% (Avg: 6.67%)</span></div>
         <div class="fmcsa-row"><span class="label">Fatal Crashes (24 mo)</span><span class="value highlight">0</span></div>
-        <div class="fmcsa-row"><span class="label">Cargo Types</span><span class="value">General Freight, Motor Vehicles, Machinery</span></div>
-        <div class="fmcsa-row"><span class="label">Last MCS-150 Filed</span><span class="value">11/29/2025</span></div>
+        <div class="fmcsa-row"><span class="label">Cargo Types</span><span class="value">General, Vehicles, Machinery</span></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FORMS -->
 <section class="forms-section" id="forms">
   <div class="container">
     <div class="section-label reveal">Get Started</div>
-    <h2 class="section-heading reveal reveal-delay-1">Ship With Us or <span class="accent">Join Our Fleet</span></h2>
-    <div class="form-tabs reveal reveal-delay-2">
-      <button class="form-tab active" data-tab="shipping" onclick="switchTab('shipping')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg> Shipping Inquiry</button>
+    <h2 class="section-heading reveal d1">Ship With Us or <span class="accent">Join Our Fleet</span></h2>
+    <div class="form-tabs reveal d2">
+      <button class="form-tab active" data-tab="shipping" onclick="switchTab('shipping')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg> Shipping Inquiry</button>
       <button class="form-tab" data-tab="driver" onclick="switchTab('driver')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Driver Application</button>
     </div>
 
+    <!-- SHIPPING -->
     <div class="form-panel active" id="panel-shipping">
       <div class="form-container">
-        <div class="form-info reveal">
+        <div class="form-info">
           <h3>Request a Freight Quote</h3>
-          <p>Tell us about your shipment and we'll get back to you within 2 hours during business hours with competitive rates and capacity options.</p>
+          <p>Tell us about your shipment and we'll get back to you within 2 hours during business hours.</p>
           <div class="form-info-list">
-            <div class="form-info-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><span>(630) 948-4754</span></div>
+            <div class="form-info-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><span>(630) 948-4754</span></div>
             <div class="form-info-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><span>1919 S Highland Ave, Ste B201, Lombard, IL 60148</span></div>
-            <div class="form-info-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5e3a372d2e3f2a3d361e3932313c3f32333f262d3b2c28373d3b2d703d3133">[email&#160;protected]</a></span></div>
+            <div class="form-info-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span>dispatch@globalmaxservices.com</span></div>
             <div class="form-info-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><span>Mon-Fri 7:00 AM - 7:00 PM CST</span></div>
           </div>
         </div>
-        <div class="form-card reveal reveal-delay-1">
+        <div class="form-card">
           <form id="shippingForm" onsubmit="submitForm(event,'shipping')">
-            <div class="form-row"><div class="form-group"><label for="s-name">Full Name *</label><input type="text" id="s-name" name="name" required></div><div class="form-group"><label for="s-company">Company</label><input type="text" id="s-company" name="company"></div></div>
-            <div class="form-row"><div class="form-group"><label for="s-email">Email *</label><input type="email" id="s-email" name="email" required></div><div class="form-group"><label for="s-phone">Phone *</label><input type="tel" id="s-phone" name="phone" required></div></div>
-            <div class="form-row"><div class="form-group"><label for="s-origin">Origin City / Zip</label><input type="text" id="s-origin" name="origin" placeholder="e.g. Chicago, IL 60601"></div><div class="form-group"><label for="s-dest">Destination City / Zip</label><input type="text" id="s-dest" name="destination" placeholder="e.g. Dallas, TX 75201"></div></div>
-            <div class="form-row"><div class="form-group"><label for="s-cargo">Cargo Type</label><select id="s-cargo" name="cargo_type"><option value="">Select cargo type...</option><option value="general_freight">General Freight</option><option value="motor_vehicles">Motor Vehicles</option><option value="machinery">Machinery / Large Objects</option><option value="expedited">Expedited / Time-Critical</option><option value="other">Other</option></select></div><div class="form-group"><label for="s-weight">Estimated Weight (lbs)</label><input type="text" id="s-weight" name="weight" placeholder="e.g. 40,000"></div></div>
-            <div class="form-row full"><div class="form-group"><label for="s-details">Shipment Details</label><textarea id="s-details" name="details" placeholder="Pickup/delivery dates, special requirements, number of loads, etc."></textarea></div></div>
+            <div class="form-row"><div class="form-group"><label>Full Name *</label><input type="text" name="name" required></div><div class="form-group"><label>Company</label><input type="text" name="company"></div></div>
+            <div class="form-row"><div class="form-group"><label>Email *</label><input type="email" name="email" required></div><div class="form-group"><label>Phone *</label><input type="tel" name="phone" required></div></div>
+            <div class="form-row"><div class="form-group"><label>Origin City / Zip</label><input type="text" name="origin" placeholder="e.g. Chicago, IL 60601"></div><div class="form-group"><label>Destination City / Zip</label><input type="text" name="destination" placeholder="e.g. Dallas, TX 75201"></div></div>
+            <div class="form-row"><div class="form-group"><label>Cargo Type</label><select name="cargo_type"><option value="">Select...</option><option value="general_freight">General Freight</option><option value="motor_vehicles">Motor Vehicles</option><option value="machinery">Machinery / Large Objects</option><option value="expedited">Expedited</option><option value="other">Other</option></select></div><div class="form-group"><label>Estimated Weight (lbs)</label><input type="text" name="weight" placeholder="e.g. 40,000"></div></div>
+            <div class="form-row full"><div class="form-group"><label>Shipment Details</label><textarea name="details" placeholder="Pickup/delivery dates, special requirements, etc."></textarea></div></div>
             <button type="submit" class="form-submit">Submit Shipping Inquiry</button>
           </form>
           <div class="form-success" id="shipping-success"><div class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h4>Quote Request Received</h4><p>Our dispatch team will contact you within 2 business hours.</p></div>
@@ -354,11 +737,12 @@ section{padding:clamp(4rem,8vw,8rem) 0}
       </div>
     </div>
 
+    <!-- DRIVER -->
     <div class="form-panel" id="panel-driver">
       <div class="form-container">
-        <div class="form-info reveal">
+        <div class="form-info">
           <h3>Join the Global Max Team</h3>
-          <p>We're always looking for experienced, safety-minded CDL drivers. Competitive pay, modern equipment, consistent miles, and a team that respects the profession.</p>
+          <p>We're looking for experienced, safety-minded CDL drivers. Competitive pay, modern equipment, consistent miles.</p>
           <div class="form-info-list">
             <div class="form-info-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><span>Competitive CPM + bonuses</span></div>
             <div class="form-info-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><span>Late-model equipment</span></div>
@@ -366,14 +750,14 @@ section{padding:clamp(4rem,8vw,8rem) 0}
             <div class="form-info-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>Full benefits package</span></div>
           </div>
         </div>
-        <div class="form-card reveal reveal-delay-1">
+        <div class="form-card">
           <form id="driverForm" onsubmit="submitForm(event,'driver')">
-            <div class="form-row"><div class="form-group"><label for="d-name">Full Name *</label><input type="text" id="d-name" name="name" required></div><div class="form-group"><label for="d-phone">Phone *</label><input type="tel" id="d-phone" name="phone" required></div></div>
-            <div class="form-row"><div class="form-group"><label for="d-email">Email *</label><input type="email" id="d-email" name="email" required></div><div class="form-group"><label for="d-city">City / State *</label><input type="text" id="d-city" name="city_state" required></div></div>
-            <div class="form-row"><div class="form-group"><label for="d-cdl">CDL Class *</label><select id="d-cdl" name="cdl_class" required><option value="">Select CDL class...</option><option value="class_a">Class A</option><option value="class_b">Class B</option><option value="permit">CDL Permit</option></select></div><div class="form-group"><label for="d-exp">Years of Experience *</label><select id="d-exp" name="experience" required><option value="">Select experience...</option><option value="0-1">Less than 1 year</option><option value="1-3">1-3 years</option><option value="3-5">3-5 years</option><option value="5-10">5-10 years</option><option value="10+">10+ years</option></select></div></div>
-            <div class="form-row"><div class="form-group"><label for="d-endorsements">Endorsements</label><input type="text" id="d-endorsements" name="endorsements" placeholder="e.g. Hazmat, Tanker, Doubles/Triples"></div><div class="form-group"><label for="d-type">Preferred Freight Type</label><select id="d-type" name="preferred_freight"><option value="">Select preference...</option><option value="dry_van">Dry Van</option><option value="flatbed">Flatbed</option><option value="auto_hauler">Auto Hauler</option><option value="no_preference">No Preference</option></select></div></div>
-            <div class="form-row full"><div class="form-group"><label for="d-accidents">Accidents or Violations (last 3 years)</label><textarea id="d-accidents" name="violations" placeholder="Please describe any accidents, moving violations, or DUI/DWI history. 'None' if clean record."></textarea></div></div>
-            <div class="form-row full"><div class="form-group"><label for="d-notes">Additional Notes</label><textarea id="d-notes" name="notes" placeholder="Anything else you'd like us to know — availability, team driving preference, etc."></textarea></div></div>
+            <div class="form-row"><div class="form-group"><label>Full Name *</label><input type="text" name="name" required></div><div class="form-group"><label>Phone *</label><input type="tel" name="phone" required></div></div>
+            <div class="form-row"><div class="form-group"><label>Email *</label><input type="email" name="email" required></div><div class="form-group"><label>City / State *</label><input type="text" name="city_state" required></div></div>
+            <div class="form-row"><div class="form-group"><label>CDL Class *</label><select name="cdl_class" required><option value="">Select...</option><option value="class_a">Class A</option><option value="class_b">Class B</option><option value="permit">CDL Permit</option></select></div><div class="form-group"><label>Years of Experience *</label><select name="experience" required><option value="">Select...</option><option value="0-1">Less than 1 year</option><option value="1-3">1-3 years</option><option value="3-5">3-5 years</option><option value="5-10">5-10 years</option><option value="10+">10+ years</option></select></div></div>
+            <div class="form-row"><div class="form-group"><label>Endorsements</label><input type="text" name="endorsements" placeholder="Hazmat, Tanker, Doubles/Triples"></div><div class="form-group"><label>Preferred Freight</label><select name="preferred_freight"><option value="">Select...</option><option value="dry_van">Dry Van</option><option value="flatbed">Flatbed</option><option value="auto_hauler">Auto Hauler</option><option value="no_preference">No Preference</option></select></div></div>
+            <div class="form-row full"><div class="form-group"><label>Accidents / Violations (last 3 years)</label><textarea name="violations" placeholder="'None' if clean record."></textarea></div></div>
+            <div class="form-row full"><div class="form-group"><label>Additional Notes</label><textarea name="notes" placeholder="Availability, team driving preference, etc."></textarea></div></div>
             <button type="submit" class="form-submit">Submit Driver Application</button>
           </form>
           <div class="form-success" id="driver-success"><div class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h4>Application Received</h4><p>Our recruiting team will reach out within 24 hours.</p></div>
@@ -383,16 +767,18 @@ section{padding:clamp(4rem,8vw,8rem) 0}
   </div>
 </section>
 
+<!-- CONTACT -->
 <div class="contact-bar" id="contact">
   <div class="container">
     <div class="contact-grid">
-      <div class="contact-card reveal"><div class="contact-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h4>Call Dispatch</h4><p><a href="tel:6309484754">(630) 948-4754</a></p></div>
-      <div class="contact-card reveal reveal-delay-1"><div class="contact-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h4>Headquarters</h4><p>1919 S Highland Ave, Ste B201<br>Lombard, IL 60148</p></div>
-      <div class="contact-card reveal reveal-delay-2"><div class="contact-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><h4>Authority</h4><p>USDOT #3491280<br>MC-1149138</p></div>
+      <div class="contact-card reveal"><div class="contact-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h4>Call Dispatch</h4><p><a href="tel:6309484754">(630) 948-4754</a></p></div>
+      <div class="contact-card reveal d1"><div class="contact-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h4>Headquarters</h4><p>1919 S Highland Ave, Ste B201<br>Lombard, IL 60148</p></div>
+      <div class="contact-card reveal d2"><div class="contact-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><h4>Authority</h4><p>USDOT #3491280<br>MC-1149138</p></div>
     </div>
   </div>
 </div>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-inner">
@@ -403,30 +789,152 @@ section{padding:clamp(4rem,8vw,8rem) 0}
   </div>
 </footer>
 
+<!-- TOAST -->
 <div class="toast" id="toast">
   <span class="toast-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
-  <span class="toast-text" id="toastText">Form submitted successfully!</span>
+  <span class="toast-text" id="toastText"></span>
 </div>
 
 <script>
-const nav=document.getElementById('mainNav'),navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks');
-window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50);const s=document.documentElement.scrollTop,h=document.documentElement.scrollHeight-document.documentElement.clientHeight;document.getElementById('scrollProgress').style.width=(s/h*100)+'%'});
-navToggle.addEventListener('click',()=>{navToggle.classList.toggle('open');navLinks.classList.toggle('open')});
-navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navToggle.classList.remove('open');navLinks.classList.remove('open')}));
+// ── NAV ──
+const nav = document.getElementById('mainNav');
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
 
-const slides=document.querySelectorAll('.hero-slide');let cs=0;
-setInterval(()=>{slides[cs].classList.remove('active');cs=(cs+1)%slides.length;slides[cs].classList.add('active')},5000);
+window.addEventListener('scroll', function() {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+  var s = document.documentElement.scrollTop;
+  var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  document.getElementById('scrollProgress').style.width = (s / h * 100) + '%';
+});
 
-// Scroll reveal (IntersectionObserver — no GSAP needed)
-new IntersectionObserver(e=>e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('active')}),{threshold:.1,rootMargin:'0px 0px -50px 0px'}).observe&&document.querySelectorAll('.reveal').forEach(el=>new IntersectionObserver(e=>e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('active')}),{threshold:.1,rootMargin:'0px 0px -50px 0px'}).observe(el));
+navToggle.addEventListener('click', function() {
+  navToggle.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
 
-const cObs=new IntersectionObserver(e=>e.forEach(en=>{if(en.isIntersecting){const el=en.target,t=parseInt(el.dataset.target),d=2e3,s=performance.now();!function a(n){const p=Math.min((n-s)/d,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));p<1&&requestAnimationFrame(a)}(s);cObs.unobserve(el)}}),{threshold:.5});
-document.querySelectorAll('.counter').forEach(c=>cObs.observe(c));
+document.querySelectorAll('.nav-links a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    navToggle.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
 
-function switchTab(t){document.querySelectorAll('.form-tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.form-panel').forEach(x=>x.classList.remove('active'));document.querySelector('.form-tab[data-tab="'+t+'"]').classList.add('active');document.getElementById('panel-'+t).classList.add('active');if(t==='driver')document.getElementById('forms').scrollIntoView({behavior:'smooth',block:'start'})}
+// ── HERO SLIDESHOW ──
+var slides = document.querySelectorAll('.hero-slide');
+var cs = 0;
+setInterval(function() {
+  slides[cs].classList.remove('active');
+  cs = (cs + 1) % slides.length;
+  slides[cs].classList.add('active');
+}, 5000);
 
-async function submitForm(e,type){e.preventDefault();const f=e.target;const btn=f.querySelector('.form-submit');btn.disabled=true;btn.textContent='Submitting...';const d=new FormData(f);const o={type};d.forEach((v,k)=>o[k]=v);try{const r=await fetch('/api/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(o)});if(!r.ok)throw new Error('Submit failed');f.style.display='none';document.getElementById(type+'-success').classList.add('show');showToast(type==='shipping'?'Quote request submitted!':'Driver application submitted!');setTimeout(()=>{f.style.display='block';f.reset();btn.disabled=false;btn.textContent=type==='shipping'?'Submit Shipping Inquiry':'Submit Driver Application';document.getElementById(type+'-success').classList.remove('show')},5e3)}catch(err){console.error(err);btn.disabled=false;btn.textContent='Try Again';showToast('Something went wrong. Please call (630) 948-4754.')}}
+// ── SCROLL REVEAL ──
+var revealObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08 });
 
-function showToast(m){const t=document.getElementById('toast');document.getElementById('toastText').textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3e3)}
+document.querySelectorAll('.reveal').forEach(function(el) {
+  revealObserver.observe(el);
+});
 
-document.querySelectorAll('a[href^="#"]').forEach(a=>a)
+// ── COUNTER ANIMATION ──
+var counterObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      var el = entry.target;
+      var target = parseInt(el.getAttribute('data-target'));
+      var duration = 2000;
+      var start = performance.now();
+      function animate(now) {
+        var elapsed = now - start;
+        var progress = Math.min(elapsed / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(target * eased);
+        if (progress < 1) requestAnimationFrame(animate);
+      }
+      requestAnimationFrame(animate);
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.counter').forEach(function(c) {
+  counterObserver.observe(c);
+});
+
+// ── FORM TABS ──
+function switchTab(tab) {
+  document.querySelectorAll('.form-tab').forEach(function(t) { t.classList.remove('active'); });
+  document.querySelectorAll('.form-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelector('.form-tab[data-tab="' + tab + '"]').classList.add('active');
+  document.getElementById('panel-' + tab).classList.add('active');
+  if (tab === 'driver') {
+    document.getElementById('forms').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+// ── FORM SUBMIT ──
+async function submitForm(e, type) {
+  e.preventDefault();
+  var f = e.target;
+  var btn = f.querySelector('.form-submit');
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+
+  var d = new FormData(f);
+  var o = { type: type };
+  d.forEach(function(v, k) { o[k] = v; });
+
+  try {
+    var r = await fetch('/api/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(o)
+    });
+    if (!r.ok) throw new Error('Failed');
+
+    f.style.display = 'none';
+    document.getElementById(type + '-success').classList.add('show');
+    showToast(type === 'shipping' ? 'Quote request submitted!' : 'Driver application submitted!');
+
+    setTimeout(function() {
+      f.style.display = 'block';
+      f.reset();
+      btn.disabled = false;
+      btn.textContent = type === 'shipping' ? 'Submit Shipping Inquiry' : 'Submit Driver Application';
+      document.getElementById(type + '-success').classList.remove('show');
+    }, 5000);
+  } catch (err) {
+    console.error(err);
+    btn.disabled = false;
+    btn.textContent = 'Try Again';
+    showToast('Something went wrong. Please call (630) 948-4754.');
+  }
+}
+
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  document.getElementById('toastText').textContent = msg;
+  t.classList.add('show');
+  setTimeout(function() { t.classList.remove('show'); }, 3000);
+}
+
+// ── SMOOTH SCROLL ──
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+  anchor.addEventListener('click', function(e) {
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.scrollY - 90;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>
