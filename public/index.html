@@ -11,7 +11,6 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
 :root {
   --navy: #0c1a3a;
   --navy-deep: #071025;
@@ -33,25 +32,17 @@
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'DM Sans', sans-serif;
 }
-
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-body { font-family: var(--font-body); color: var(--gray-700); line-height: 1.6; background: var(--white); }
+body { font-family: var(--font-body); color: var(--gray-700); line-height: 1.7; background: var(--white); }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 button { cursor: pointer; font-family: inherit; border: none; background: none; }
 input, textarea, select { font-family: inherit; }
 .container { max-width: 1440px; margin: 0 auto; padding: 0 48px; }
 
-/* Elements are visible by default — no reveal animations */
-
 /* ── TOP BAR ── */
-.top-bar {
-  background: var(--navy); color: rgba(255,255,255,0.8); font-size: 0.78rem;
-  padding: 0.5rem 0; letter-spacing: 0.02em;
-}
-.top-bar .container {
-  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;
-}
+.top-bar { background: var(--navy); color: rgba(255,255,255,0.8); font-size: 0.78rem; padding: 0.5rem 0; }
+.top-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
 .top-bar a { color: rgba(255,255,255,0.9); transition: color 0.2s; }
 .top-bar a:hover { color: var(--amber); }
 .top-bar-left { display: flex; gap: 1.5rem; align-items: center; }
@@ -59,338 +50,250 @@ input, textarea, select { font-family: inherit; }
 .top-bar-item svg { width: 14px; height: 14px; opacity: 0.7; }
 
 /* ── NAV ── */
-.nav {
-  background: var(--white); position: sticky; top: 0; z-index: 1000;
-  border-bottom: 1px solid var(--gray-100);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-}
-.nav .container {
-  display: flex; align-items: center; justify-content: space-between;
-  height: 80px;
-}
-.nav-logo { height: 60px; }
-.nav-links { display: flex; gap: 2rem; align-items: center; }
-.nav-links a {
-  font-size: 0.88rem; font-weight: 500; color: var(--gray-600);
-  transition: color 0.2s; padding: 0.25rem 0;
-}
+.nav { background: var(--white); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--gray-100); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.nav .container { display: flex; align-items: center; justify-content: space-between; height: 90px; }
+.nav-logo { height: 70px; }
+.nav-links { display: flex; gap: 1.8rem; align-items: center; }
+.nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--gray-600); transition: color 0.2s; }
 .nav-links a:hover { color: var(--navy); }
-.nav-cta {
-  background: var(--amber); color: var(--white); font-weight: 700;
-  font-size: 0.85rem; padding: 0.65rem 1.5rem; border-radius: 5px;
-  transition: background 0.2s;
-}
+.nav-cta { background: var(--amber); color: var(--white); font-weight: 700; font-size: 0.85rem; padding: 0.65rem 1.5rem; border-radius: 5px; transition: background 0.2s; }
 .nav-cta:hover { background: var(--amber-hover); }
-.nav-phone {
-  display: flex; align-items: center; gap: 0.4rem;
-  font-weight: 700; color: var(--navy); font-size: 0.92rem;
-}
+.nav-phone { display: flex; align-items: center; gap: 0.4rem; font-weight: 700; color: var(--navy); font-size: 0.92rem; }
 .nav-phone svg { width: 18px; height: 18px; color: var(--amber); }
-
 .nav-toggle { display: none; padding: 0.5rem; }
-.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--navy); margin: 5px 0; transition: all 0.3s; }
+.nav-toggle span { display: block; width: 26px; height: 2px; background: var(--navy); margin: 6px 0; transition: all 0.3s; }
 
-@media (max-width: 960px) {
+@media (max-width: 1060px) {
   .top-bar { display: none; }
   .nav-toggle { display: block; z-index: 1001; }
   .nav-phone-desktop { display: none; }
-  .nav-links {
-    position: fixed; top: 0; right: -100%; width: 85%; max-width: 360px;
-    height: 100vh; flex-direction: column; background: var(--white);
-    padding: 5rem 2rem 2rem; gap: 1.5rem; box-shadow: -4px 0 20px rgba(0,0,0,0.1);
-    transition: right 0.35s ease;
-  }
+  .nav .container { height: 72px; }
+  .nav-logo { height: 52px; }
+  .nav-links { position: fixed; top: 0; right: -100%; width: 85%; max-width: 380px; height: 100vh; flex-direction: column; background: var(--white); padding: 5rem 2rem 2rem; gap: 1.5rem; box-shadow: -4px 0 20px rgba(0,0,0,0.1); transition: right 0.35s ease; }
   .nav-links.open { right: 0; }
-  .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px,6px); }
   .nav-toggle.open span:nth-child(2) { opacity: 0; }
-  .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+  .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-6px); }
+}
+@media (max-width: 600px) {
+  .container { padding: 0 20px; }
+  .nav-logo { height: 44px; }
 }
 
 /* ── HERO ── */
-.hero {
-  position: relative; min-height: 650px; display: flex; align-items: center;
-  overflow: hidden; background: var(--navy-deep);
-}
+.hero { position: relative; min-height: 680px; display: flex; align-items: center; overflow: hidden; background: var(--navy-deep); }
 .hero-slides { position: absolute; inset: 0; }
-.hero-slide {
-  position: absolute; inset: 0; opacity: 0; transition: opacity 1.2s ease;
-  background-size: cover; background-position: center;
-}
+.hero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.2s ease; background-size: cover; background-position: center; }
 .hero-slide.active { opacity: 1; }
-.hero-slide::after {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(to right, rgba(7,16,37,0.88) 0%, rgba(7,16,37,0.5) 60%, rgba(7,16,37,0.3) 100%);
-}
-.hero-content {
-  position: relative; z-index: 2; padding: 5rem 0; max-width: 750px;
-}
-.hero-title {
-  font-family: var(--font-heading); font-size: clamp(2.6rem, 5.5vw, 3.8rem);
-  font-weight: 800; color: var(--white); line-height: 1.12;
-  margin-bottom: 1.2rem;
-}
+.hero-slide::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(7,16,37,0.9) 0%, rgba(7,16,37,0.55) 55%, rgba(7,16,37,0.3) 100%); }
+.hero-content { position: relative; z-index: 2; padding: 5rem 0; max-width: 760px; }
+.hero-title { font-family: var(--font-heading); font-size: clamp(2.6rem, 5.5vw, 3.8rem); font-weight: 800; color: var(--white); line-height: 1.12; margin-bottom: 1.5rem; }
 .hero-title span { color: var(--amber); }
-.hero-sub {
-  font-size: 1.05rem; color: rgba(255,255,255,0.75);
-  line-height: 1.7; margin-bottom: 2rem; max-width: 620px;
-}
+.hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.75); line-height: 1.8; margin-bottom: 2rem; max-width: 640px; }
 .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  background: var(--amber); color: var(--white); font-weight: 700;
-  font-size: 0.9rem; padding: 0.9rem 2rem; border-radius: 5px;
-  transition: all 0.2s;
-}
+.btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--amber); color: var(--white); font-weight: 700; font-size: 0.9rem; padding: 0.95rem 2.2rem; border-radius: 5px; transition: all 0.2s; }
 .btn-primary:hover { background: var(--amber-hover); transform: translateY(-1px); }
 .btn-primary svg { width: 16px; height: 16px; }
-.btn-secondary {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  background: rgba(255,255,255,0.1); color: var(--white); font-weight: 600;
-  font-size: 0.9rem; padding: 0.9rem 2rem; border-radius: 5px;
-  border: 1px solid rgba(255,255,255,0.25); transition: all 0.2s;
-}
+.btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.1); color: var(--white); font-weight: 600; font-size: 0.9rem; padding: 0.95rem 2.2rem; border-radius: 5px; border: 1px solid rgba(255,255,255,0.25); transition: all 0.2s; }
 .btn-secondary:hover { background: rgba(255,255,255,0.18); }
+.btn-amber-outline { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--amber); font-weight: 700; font-size: 0.9rem; padding: 0.95rem 2.2rem; border-radius: 5px; border: 2px solid var(--amber); transition: all 0.2s; }
+.btn-amber-outline:hover { background: var(--amber); color: var(--white); }
 
 @media (max-width: 600px) {
-  .container { padding: 0 20px; }
-  .top-bar { display: none; }
-  .nav .container { height: 64px; }
-  .nav-logo { height: 48px; }
-  .hero { min-height: 500px; }
+  .hero { min-height: 520px; }
   .hero-content { padding: 3rem 0; }
   .hero-btns { flex-direction: column; }
   .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
 }
 
 /* ── STATS STRIP ── */
-.stats-strip { background: var(--navy); padding: 2.5rem 0; }
-.stats-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;
-}
+.stats-strip { background: var(--navy); padding: 3rem 0; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
 .stat-item { text-align: center; color: var(--white); }
-.stat-num {
-  font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 800; line-height: 1;
-}
+.stat-num { font-family: var(--font-heading); font-size: clamp(2.2rem, 4vw, 3rem); font-weight: 800; line-height: 1; }
 .stat-num span { color: var(--amber); }
-.stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.1em; }
-
+.stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 0.4rem; text-transform: uppercase; letter-spacing: 0.1em; }
 @media (max-width: 768px) { .stats-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; } }
 @media (max-width: 420px) { .stats-grid { grid-template-columns: 1fr; } }
 
-/* ── SECTION ── */
-.section { padding: clamp(3.5rem, 7vw, 6rem) 0; }
+/* ── SHARED SECTION ── */
+.section { padding: clamp(4rem, 8vw, 6rem) 0; }
 .section-alt { background: var(--off-white); }
+.section-dark { background: var(--navy); color: var(--white); }
 .section-header { text-align: center; max-width: 780px; margin: 0 auto 3rem; }
-.section-tag {
-  display: inline-block; font-size: 0.72rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.15em; color: var(--amber);
-  margin-bottom: 0.6rem;
-}
-.section-title {
-  font-family: var(--font-heading); font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-  font-weight: 700; color: var(--navy); line-height: 1.2;
-}
-.section-desc { color: var(--gray-400); margin-top: 0.8rem; font-size: 1rem; }
+.section-tag { display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--amber); margin-bottom: 0.6rem; }
+.section-title { font-family: var(--font-heading); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: var(--navy); line-height: 1.2; }
+.section-dark .section-title { color: var(--white); }
+.section-desc { color: var(--gray-400); margin-top: 0.8rem; font-size: 1.05rem; line-height: 1.7; }
+.section-dark .section-desc { color: rgba(255,255,255,0.6); }
 
 /* ── ABOUT ── */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 .about-img { border-radius: 10px; overflow: hidden; }
 .about-img img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3; }
-.about-text h3 {
-  font-family: var(--font-heading); font-size: 2rem; font-weight: 700;
-  color: var(--navy); margin-bottom: 1rem; line-height: 1.2;
-}
+.about-text h3 { font-family: var(--font-heading); font-size: 2.1rem; font-weight: 700; color: var(--navy); margin-bottom: 1.2rem; line-height: 1.2; }
 .about-text h3 span { color: var(--amber); }
-.about-text p { color: var(--gray-500); margin-bottom: 1rem; }
+.about-text p { color: var(--gray-500); margin-bottom: 1.2rem; font-size: 1rem; }
 .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
-.af {
-  display: flex; gap: 0.7rem; align-items: start;
-  padding: 0.8rem; background: var(--off-white); border-radius: 8px;
-}
-.af-icon {
-  width: 32px; height: 32px; min-width: 32px; border-radius: 6px;
-  background: var(--amber-light); display: flex; align-items: center;
-  justify-content: center;
-}
+.af { display: flex; gap: 0.7rem; align-items: start; padding: 0.8rem; background: var(--off-white); border-radius: 8px; }
+.af-icon { width: 34px; height: 34px; min-width: 34px; border-radius: 6px; background: var(--amber-light); display: flex; align-items: center; justify-content: center; }
 .af-icon svg { width: 16px; height: 16px; color: var(--amber); }
-.af h4 { font-size: 0.82rem; font-weight: 600; color: var(--navy); }
-.af p { font-size: 0.75rem; color: var(--gray-400); margin-top: 0.1rem; }
-
-@media (max-width: 768px) {
-  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .about-features { grid-template-columns: 1fr; }
-}
+.af h4 { font-size: 0.85rem; font-weight: 600; color: var(--navy); }
+.af p { font-size: 0.78rem; color: var(--gray-400); margin-top: 0.15rem; }
+@media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } .about-features { grid-template-columns: 1fr; } }
 
 /* ── SERVICES ── */
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-.svc-card {
-  background: var(--white); border: 1px solid var(--gray-100); border-radius: 10px;
-  padding: 2rem 1.5rem; transition: all 0.3s; position: relative; overflow: hidden;
-}
+.svc-card { background: var(--white); border: 1px solid var(--gray-100); border-radius: 10px; padding: 2rem 1.8rem; transition: all 0.3s; position: relative; overflow: hidden; }
 .svc-card:hover { border-color: var(--amber); box-shadow: 0 8px 30px rgba(232,134,12,0.08); transform: translateY(-3px); }
-.svc-card::after {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: var(--amber); transform: scaleX(0); transition: transform 0.3s;
-}
+.svc-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--amber); transform: scaleX(0); transition: transform 0.3s; }
 .svc-card:hover::after { transform: scaleX(1); }
-.svc-icon {
-  width: 48px; height: 48px; border-radius: 10px; margin-bottom: 1.2rem;
-  background: var(--amber-light); display: flex; align-items: center; justify-content: center;
-}
+.svc-icon { width: 50px; height: 50px; border-radius: 10px; margin-bottom: 1.2rem; background: var(--amber-light); display: flex; align-items: center; justify-content: center; }
 .svc-icon svg { width: 24px; height: 24px; color: var(--amber); }
-.svc-card h3 { font-family: var(--font-heading); font-size: 1.05rem; color: var(--navy); margin-bottom: 0.6rem; }
-.svc-card p { font-size: 0.88rem; color: var(--gray-400); line-height: 1.6; }
-
+.svc-card h3 { font-family: var(--font-heading); font-size: 1.1rem; color: var(--navy); margin-bottom: 0.7rem; }
+.svc-card p { font-size: 0.92rem; color: var(--gray-500); line-height: 1.7; }
 @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
+
+/* ── WHY CHOOSE ── */
+.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 1rem; }
+.why-card { display: flex; gap: 1.2rem; padding: 2rem; background: var(--white); border-radius: 10px; border: 1px solid var(--gray-100); transition: border-color 0.2s; }
+.why-card:hover { border-color: var(--amber); }
+.why-num { font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--amber); min-width: 48px; line-height: 1; }
+.why-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.why-card p { font-size: 0.92rem; color: var(--gray-500); line-height: 1.7; }
+@media (max-width: 768px) { .why-grid { grid-template-columns: 1fr; } }
+
+/* ── COVERAGE ── */
+.coverage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.coverage-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+.coverage-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem; color: var(--gray-600); padding: 0.5rem 0; }
+.coverage-item svg { width: 16px; height: 16px; color: var(--success); flex-shrink: 0; }
+.coverage-text h3 { font-family: var(--font-heading); font-size: 2.1rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; line-height: 1.2; }
+.coverage-text h3 span { color: var(--amber); }
+.coverage-text p { color: var(--gray-500); margin-bottom: 1.2rem; font-size: 1rem; }
+@media (max-width: 768px) { .coverage-grid { grid-template-columns: 1fr; } .coverage-list { grid-template-columns: 1fr; } }
+
+/* ── SAFETY ── */
+.safety-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.safety-card { text-align: center; padding: 2.5rem 2rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; }
+.safety-big { font-family: var(--font-heading); font-size: 3rem; font-weight: 800; color: var(--amber); line-height: 1; }
+.safety-label { font-size: 0.88rem; color: rgba(255,255,255,0.7); margin-top: 0.6rem; line-height: 1.5; }
+.safety-sub { font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 0.3rem; }
+@media (max-width: 768px) { .safety-grid { grid-template-columns: 1fr; } }
+
+/* ── FLEET ── */
+.fleet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.fleet-img { border-radius: 10px; overflow: hidden; }
+.fleet-img img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16/10; }
+.fleet-text h3 { font-family: var(--font-heading); font-size: 2.1rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; line-height: 1.2; }
+.fleet-text h3 span { color: var(--amber); }
+.fleet-text p { color: var(--gray-500); margin-bottom: 1.2rem; font-size: 1rem; }
+.fleet-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+.fleet-spec { padding: 1rem; background: var(--off-white); border-radius: 8px; }
+.fleet-spec h4 { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--amber); }
+.fleet-spec p { font-size: 0.82rem; color: var(--gray-400); margin-top: 0.2rem; }
+@media (max-width: 768px) { .fleet-grid { grid-template-columns: 1fr; gap: 2rem; } }
 
 /* ── CREDENTIALS ── */
 .creds-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
-.creds-list { display: flex; flex-direction: column; gap: 1.2rem; }
-.cred-item {
-  display: flex; gap: 1rem; padding: 1.2rem; border: 1px solid var(--gray-100);
-  border-radius: 8px; transition: border-color 0.2s;
-}
-.cred-item:hover { border-color: var(--amber); }
-.cred-num { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800; color: var(--amber); min-width: 36px; }
-.cred-item h4 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 0.2rem; }
-.cred-item p { font-size: 0.85rem; color: var(--gray-400); }
-
-.fmcsa-card {
-  background: var(--navy); border-radius: 12px; padding: 2rem; color: var(--white);
-}
-.fmcsa-card h3 {
-  font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 1.5rem;
-  display: flex; align-items: center; gap: 0.8rem;
-}
-.fmcsa-verified {
-  display: inline-flex; align-items: center; gap: 0.3rem;
-  background: rgba(22,163,74,0.15); color: var(--success); border-radius: 4px;
-  padding: 0.2rem 0.6rem; font-size: 0.68rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.06em;
-}
+.fmcsa-card { background: var(--navy); border-radius: 12px; padding: 2.5rem; color: var(--white); }
+.fmcsa-card h3 { font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.8rem; }
+.fmcsa-verified { display: inline-flex; align-items: center; gap: 0.3rem; background: rgba(22,163,74,0.15); color: var(--success); border-radius: 4px; padding: 0.2rem 0.6rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
 .fmcsa-verified svg { width: 12px; height: 12px; }
-.fr {
-  display: flex; justify-content: space-between; padding: 0.6rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.84rem;
-}
+.fr { display: flex; justify-content: space-between; padding: 0.65rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.86rem; }
 .fr:last-child { border-bottom: none; }
 .fr .l { color: rgba(255,255,255,0.5); }
 .fr .v { font-weight: 600; }
 .fr .v.g { color: var(--success); }
 .fr .v.a { color: var(--amber); }
-
+.creds-content h3 { font-family: var(--font-heading); font-size: 2.1rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; line-height: 1.2; }
+.creds-content h3 span { color: var(--amber); }
+.creds-content p { color: var(--gray-500); margin-bottom: 1.2rem; font-size: 1rem; line-height: 1.7; }
+.creds-highlights { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+.creds-hl { display: flex; gap: 0.8rem; align-items: start; }
+.creds-hl-icon { width: 28px; height: 28px; min-width: 28px; border-radius: 50%; background: var(--amber-light); display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+.creds-hl-icon svg { width: 14px; height: 14px; color: var(--amber); }
+.creds-hl h4 { font-size: 0.95rem; font-weight: 600; color: var(--navy); }
+.creds-hl p { font-size: 0.85rem; color: var(--gray-400); }
 @media (max-width: 768px) { .creds-grid { grid-template-columns: 1fr; } }
 
+/* ── CTA BANNER ── */
+.cta-banner { background: var(--amber); padding: 3.5rem 0; text-align: center; }
+.cta-banner h2 { font-family: var(--font-heading); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--white); margin-bottom: 0.8rem; }
+.cta-banner p { color: rgba(255,255,255,0.85); font-size: 1.05rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+.cta-banner .btn-white { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--white); color: var(--navy); font-weight: 700; font-size: 0.9rem; padding: 0.95rem 2.2rem; border-radius: 5px; transition: all 0.2s; }
+.cta-banner .btn-white:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+
 /* ── FORMS ── */
-.form-tabs {
-  display: flex; gap: 0; margin-bottom: 2rem; background: var(--gray-50);
-  border-radius: 8px; overflow: hidden; max-width: 420px; border: 1px solid var(--gray-100);
-}
-.form-tab {
-  flex: 1; padding: 0.85rem 1rem; font-weight: 600; font-size: 0.85rem;
-  color: var(--gray-400); transition: all 0.2s; text-align: center;
-  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
-}
+.form-tabs { display: flex; margin-bottom: 2rem; background: var(--gray-50); border-radius: 8px; overflow: hidden; max-width: 460px; border: 1px solid var(--gray-100); }
+.form-tab { flex: 1; padding: 0.9rem 1rem; font-weight: 600; font-size: 0.85rem; color: var(--gray-400); transition: all 0.2s; text-align: center; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
 .form-tab svg { width: 16px; height: 16px; }
 .form-tab.active { background: var(--amber); color: var(--white); }
 .form-tab:hover:not(.active) { color: var(--navy); }
 .form-panel { display: none; }
 .form-panel.active { display: block; }
-
 .form-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
-.form-info h3 { font-family: var(--font-heading); font-size: 1.5rem; color: var(--navy); margin-bottom: 0.8rem; }
-.form-info p { color: var(--gray-400); margin-bottom: 2rem; }
+.form-info h3 { font-family: var(--font-heading); font-size: 1.6rem; color: var(--navy); margin-bottom: 0.8rem; }
+.form-info > p { color: var(--gray-400); margin-bottom: 2rem; font-size: 1rem; line-height: 1.7; }
 .form-info-list { display: flex; flex-direction: column; gap: 0.8rem; }
-.fi { display: flex; gap: 0.7rem; align-items: center; font-size: 0.9rem; color: var(--gray-500); }
-.fi-icon {
-  width: 32px; height: 32px; min-width: 32px; border-radius: 6px;
-  background: var(--amber-light); display: flex; align-items: center; justify-content: center;
-}
+.fi { display: flex; gap: 0.7rem; align-items: center; font-size: 0.92rem; color: var(--gray-500); }
+.fi-icon { width: 32px; height: 32px; min-width: 32px; border-radius: 6px; background: var(--amber-light); display: flex; align-items: center; justify-content: center; }
 .fi-icon svg { width: 15px; height: 15px; color: var(--amber); }
-
 .form-card { background: var(--off-white); border-radius: 12px; padding: 2rem; border: 1px solid var(--gray-100); }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
 .form-row.full { grid-template-columns: 1fr; }
 .fg { display: flex; flex-direction: column; gap: 0.3rem; }
 .fg label { font-size: 0.75rem; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.06em; }
-.fg input, .fg textarea, .fg select {
-  background: var(--white); border: 1px solid var(--gray-200); color: var(--gray-700);
-  padding: 0.7rem 0.9rem; border-radius: 6px; font-size: 0.9rem; outline: none;
-  transition: border-color 0.2s;
-}
+.fg input, .fg textarea, .fg select { background: var(--white); border: 1px solid var(--gray-200); color: var(--gray-700); padding: 0.75rem 0.9rem; border-radius: 6px; font-size: 0.9rem; outline: none; transition: border-color 0.2s; }
 .fg input:focus, .fg textarea:focus, .fg select:focus { border-color: var(--amber); }
 .fg textarea { resize: vertical; min-height: 80px; }
 .fg select { cursor: pointer; }
-.form-submit {
-  width: 100%; margin-top: 0.8rem; padding: 0.85rem; background: var(--amber);
-  color: var(--white); font-weight: 700; font-size: 0.88rem; border-radius: 6px;
-  border: none; transition: background 0.2s;
-}
+.form-submit { width: 100%; margin-top: 0.8rem; padding: 0.9rem; background: var(--amber); color: var(--white); font-weight: 700; font-size: 0.9rem; border-radius: 6px; border: none; transition: background 0.2s; }
 .form-submit:hover { background: var(--amber-hover); }
 .form-success { display: none; text-align: center; padding: 2.5rem; }
 .form-success.show { display: block; }
-.form-success .chk {
-  width: 56px; height: 56px; border-radius: 50%; margin: 0 auto 1rem;
-  background: rgba(22,163,74,0.1); display: flex; align-items: center; justify-content: center;
-}
+.form-success .chk { width: 56px; height: 56px; border-radius: 50%; margin: 0 auto 1rem; background: rgba(22,163,74,0.1); display: flex; align-items: center; justify-content: center; }
 .form-success .chk svg { width: 26px; height: 26px; color: var(--success); }
 .form-success h4 { font-family: var(--font-heading); color: var(--navy); margin-bottom: 0.3rem; }
 .form-success p { color: var(--gray-400); font-size: 0.88rem; }
-
-@media (max-width: 768px) {
-  .form-layout { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .form-tabs { max-width: 100%; }
-}
+@media (max-width: 768px) { .form-layout { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } .form-tabs { max-width: 100%; } }
 
 /* ── CONTACT STRIP ── */
 .contact-strip { background: var(--navy); padding: 3.5rem 0; }
 .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 .cc { text-align: center; color: var(--white); }
-.cc-icon {
-  width: 44px; height: 44px; margin: 0 auto 0.8rem; border-radius: 8px;
-  background: rgba(232,134,12,0.15); display: flex; align-items: center; justify-content: center;
-}
-.cc-icon svg { width: 20px; height: 20px; color: var(--amber); }
+.cc-icon { width: 48px; height: 48px; margin: 0 auto 0.8rem; border-radius: 10px; background: rgba(232,134,12,0.15); display: flex; align-items: center; justify-content: center; }
+.cc-icon svg { width: 22px; height: 22px; color: var(--amber); }
 .cc h4 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.45); margin-bottom: 0.4rem; }
 .cc p { font-size: 1rem; font-weight: 600; }
 .cc a { color: var(--white); transition: color 0.2s; }
 .cc a:hover { color: var(--amber); }
-
 @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
 
 /* ── FOOTER ── */
-.footer { background: var(--navy-deep); padding: 2rem 0; }
+.footer { background: var(--navy-deep); padding: 2.5rem 0; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-.footer-logo { height: 36px; opacity: 0.6; filter: brightness(0) invert(1); }
-.footer-text { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
+.footer-logo { height: 40px; opacity: 0.6; filter: brightness(0) invert(1); }
+.footer-text { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
 .footer-links { display: flex; gap: 1.5rem; }
-.footer-links a { font-size: 0.75rem; color: rgba(255,255,255,0.4); transition: color 0.2s; }
+.footer-links a { font-size: 0.78rem; color: rgba(255,255,255,0.4); transition: color 0.2s; }
 .footer-links a:hover { color: var(--amber); }
-
 @media (max-width: 600px) { .footer-inner { flex-direction: column; text-align: center; } }
 
 /* Toast */
-.toast {
-  position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9999;
-  background: var(--navy); color: var(--white); padding: 1rem 1.5rem;
-  border-radius: 8px; display: flex; align-items: center; gap: 0.7rem;
-  transform: translateY(120%); transition: transform 0.4s ease;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.2); font-size: 0.88rem;
-}
+.toast { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9999; background: var(--navy); color: var(--white); padding: 1rem 1.5rem; border-radius: 8px; display: flex; align-items: center; gap: 0.7rem; transform: translateY(120%); transition: transform 0.4s ease; box-shadow: 0 8px 30px rgba(0,0,0,0.2); font-size: 0.88rem; }
 .toast.show { transform: translateY(0); }
 .toast svg { width: 20px; height: 20px; flex-shrink: 0; }
 </style>
 </head>
 <body>
 
-<!-- Top utility bar -->
+<!-- Top Bar -->
 <div class="top-bar">
   <div class="container">
     <div class="top-bar-left">
       <div class="top-bar-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:6309484754">(630) 948-4754</a></div>
-      <div class="top-bar-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Lombard, IL</div>
+      <div class="top-bar-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Lombard, Illinois</div>
     </div>
     <div>USDOT #3491280 &middot; MC-1149138</div>
   </div>
@@ -403,6 +306,7 @@ input, textarea, select { font-family: inherit; }
     <div class="nav-links" id="navLinks">
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#coverage">Coverage</a>
       <a href="#credentials">Credentials</a>
       <a href="#forms">Careers</a>
       <span class="nav-phone nav-phone-desktop"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:6309484754">(630) 948-4754</a></span>
@@ -421,8 +325,8 @@ input, textarea, select { font-family: inherit; }
   </div>
   <div class="container">
     <div class="hero-content">
-      <h1 class="hero-title">Freight capacity you can <span>count on</span>, mile after mile.</h1>
-      <p class="hero-sub">99 power units, 115 drivers, 15 million annual miles. Authorized interstate carrier for general freight, motor vehicles, and heavy machinery — with a driver safety record 3.7x better than the national average.</p>
+      <h1 class="hero-title">Freight Capacity You Can <span>Count On</span>, Mile After Mile.</h1>
+      <p class="hero-sub">We're a federally authorized interstate carrier running 99 power units and 115 professional drivers across 48 states. Whether you're shipping general freight, motor vehicles, or heavy machinery, Global Max delivers with a driver safety record that's 3.7 times better than the national average.</p>
       <div class="hero-btns">
         <a href="#forms" class="btn-primary">Request a Quote <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         <a href="#forms" class="btn-secondary" onclick="switchTab('driver')">Drive With Us</a>
@@ -435,10 +339,10 @@ input, textarea, select { font-family: inherit; }
 <div class="stats-strip">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat-item"><div class="stat-num"><span class="counter" data-target="99">0</span><span>+</span></div><div class="stat-label">Power Units</div></div>
-      <div class="stat-item"><div class="stat-num"><span class="counter" data-target="15">0</span><span>M</span></div><div class="stat-label">Annual Miles</div></div>
-      <div class="stat-item"><div class="stat-num"><span class="counter" data-target="115">0</span><span>+</span></div><div class="stat-label">Drivers</div></div>
-      <div class="stat-item"><div class="stat-num"><span class="counter" data-target="48">0</span><span></span></div><div class="stat-label">States Covered</div></div>
+      <div class="stat-item"><div class="stat-num">99<span>+</span></div><div class="stat-label">Power Units</div></div>
+      <div class="stat-item"><div class="stat-num">15<span>M</span></div><div class="stat-label">Annual Miles</div></div>
+      <div class="stat-item"><div class="stat-num">115<span>+</span></div><div class="stat-label">Professional Drivers</div></div>
+      <div class="stat-item"><div class="stat-num">48<span></span></div><div class="stat-label">States Covered</div></div>
     </div>
   </div>
 </div>
@@ -447,17 +351,18 @@ input, textarea, select { font-family: inherit; }
 <section class="section" id="about">
   <div class="container">
     <div class="about-grid">
-      <div class="about-img reveal"><img src="images/hero-port.png" alt="Global Max Services operations" loading="lazy"></div>
+      <div class="about-img"><img src="images/hero-port.png" alt="Global Max Services operations" loading="lazy"></div>
       <div class="about-text">
-        <div class="section-tag reveal">About Us</div>
-        <h3 class="reveal d1">The backbone of <span>American freight</span></h3>
-        <p class="reveal d2">Global Max Services LLC is a federally authorized interstate property carrier headquartered in Lombard, Illinois. We operate a modern fleet logging over 15 million miles annually across the continental United States.</p>
-        <p class="reveal d3">Our authority covers general freight, motor vehicle transport, and oversized machinery hauling — making us a versatile partner for shippers who need reliability at scale.</p>
+        <div class="section-tag">About Global Max Services</div>
+        <h3>The Backbone of <span>American Freight</span></h3>
+        <p>Global Max Services LLC is a federally authorized interstate property carrier headquartered in Lombard, Illinois, just outside Chicago. Since our founding, we've built a reputation for consistent performance, regulatory compliance, and a safety-first approach to every load we haul.</p>
+        <p>We operate a modern fleet of 99 power units staffed by 115 professionally trained drivers who collectively log over 15 million miles annually across the continental United States. Our drivers aren't just behind the wheel — they're the face of our company, rigorously trained in compliance, defensive driving, and cargo handling.</p>
+        <p>Our operating authority covers general freight, motor vehicle transport, and the movement of oversized machinery and large objects. That range of authorization, combined with our scale and safety record, makes us a versatile and dependable partner for shippers who need more than just capacity — they need a carrier they can trust.</p>
         <div class="about-features">
-          <div class="af reveal"><div class="af-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div><h4>FMCSA Compliant</h4><p>Full authority, current insurance</p></div></div>
-          <div class="af reveal d1"><div class="af-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><h4>Real-Time Tracking</h4><p>GPS + ELD on all units</p></div></div>
-          <div class="af reveal d2"><div class="af-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div><h4>48-State Coverage</h4><p>Nationwide interstate reach</p></div></div>
-          <div class="af reveal d3"><div class="af-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4>Safety Leader</h4><p>1.8% OOS rate (avg: 6.67%)</p></div></div>
+          <div class="af"><div class="af-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div><h4>Fully FMCSA Compliant</h4><p>Active authority, current insurance, biennial filings</p></div></div>
+          <div class="af"><div class="af-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><h4>Real-Time GPS Tracking</h4><p>ELD compliance on every unit in the fleet</p></div></div>
+          <div class="af"><div class="af-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div><h4>48-State Interstate Coverage</h4><p>Authorized for nationwide for-hire transport</p></div></div>
+          <div class="af"><div class="af-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4>Industry-Leading Safety</h4><p>1.8% driver OOS rate vs. 6.67% national avg</p></div></div>
         </div>
       </div>
     </div>
@@ -468,75 +373,176 @@ input, textarea, select { font-family: inherit; }
 <section class="section section-alt" id="services">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag reveal">Services</div>
-      <h2 class="section-title reveal d1">What we move</h2>
-      <p class="section-desc reveal d2">Authorized for a wide range of cargo types with the capacity and compliance to back it up.</p>
+      <div class="section-tag">Our Services</div>
+      <h2 class="section-title">What We Move</h2>
+      <p class="section-desc">Global Max is authorized by the FMCSA to transport a wide range of cargo types. From dry goods and retail inventory to automobiles and industrial equipment, we provide the capacity, equipment, and expertise to move your freight safely and on schedule.</p>
     </div>
     <div class="services-grid">
-      <div class="svc-card reveal"><div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h3>General Freight</h3><p>Full truckload and partial capacity for palletized goods, retail inventory, and commercial shipments coast-to-coast.</p></div>
-      <div class="svc-card reveal d1"><div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3>Vehicle Transport</h3><p>Licensed carrier for autos, trucks, and fleet vehicles for dealerships, auctions, and manufacturers.</p></div>
-      <div class="svc-card reveal d2"><div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>Machinery &amp; Oversize</h3><p>Heavy equipment and industrial machinery with specialized handling and oversized load route planning.</p></div>
-      <div class="svc-card reveal"><div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Dedicated Routes</h3><p>High-frequency lane coverage for shippers needing consistent capacity on critical routes every week.</p></div>
-      <div class="svc-card reveal d1"><div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg></div><h3>Logistics Coordination</h3><p>End-to-end shipment management with real-time visibility and documentation on every load.</p></div>
-      <div class="svc-card reveal d2"><div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3>Expedited Freight</h3><p>Time-critical shipments with team drivers, dedicated equipment, and priority routing.</p></div>
+      <div class="svc-card"><div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h3>General Freight</h3><p>Full truckload and partial capacity for palletized goods, retail inventory, manufacturing supplies, and commercial shipments moving coast-to-coast. We handle the scheduling, documentation, and delivery confirmation so your supply chain keeps running without interruptions.</p></div>
+      <div class="svc-card"><div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3>Motor Vehicle Transport</h3><p>Licensed and insured for the transportation of automobiles, trucks, and fleet vehicles. We work with dealerships, auction houses, manufacturers, and private shippers to move vehicles safely across state lines with full insurance coverage and real-time tracking throughout transit.</p></div>
+      <div class="svc-card"><div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>Machinery &amp; Oversize Loads</h3><p>Heavy equipment, industrial machinery, construction gear, and other large objects that require specialized handling, route planning, and permit coordination. Our team manages the logistics from loading to delivery, including pilot cars and escort services when required.</p></div>
+      <div class="svc-card"><div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Dedicated Contract Routes</h3><p>For shippers who need guaranteed capacity on their most critical lanes, we offer dedicated contract hauling with assigned equipment and drivers. You get consistent pickup and delivery windows, a single point of contact, and priority scheduling that takes the uncertainty out of your logistics.</p></div>
+      <div class="svc-card"><div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg></div><h3>End-to-End Logistics Coordination</h3><p>From the moment a load is dispatched to the final delivery confirmation, our operations team provides full visibility into every shipment. You get proactive communication, detailed documentation, BOL management, and a responsive dispatch team that answers the phone when it matters most.</p></div>
+      <div class="svc-card"><div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3>Expedited &amp; Time-Critical Freight</h3><p>When delivery windows are tight and there's no room for delays, our expedited service puts your freight on dedicated equipment with team drivers and priority routing. We coordinate every leg of the transit to meet your most urgent deadlines — including nights, weekends, and holidays.</p></div>
     </div>
   </div>
 </section>
 
-<!-- Credentials -->
-<section class="section" id="credentials">
+<!-- Why Choose Us -->
+<section class="section" id="why">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag reveal">Credentials</div>
-      <h2 class="section-title reveal d1">Federal authority, proven record</h2>
+      <div class="section-tag">Why Global Max</div>
+      <h2 class="section-title">Why Shippers and Brokers Choose Us</h2>
+      <p class="section-desc">In an industry full of carriers, what sets Global Max apart is our combination of scale, safety, compliance, and responsiveness. We're not just hauling freight — we're building long-term shipping partnerships.</p>
     </div>
-    <div class="creds-grid">
-      <div class="creds-list">
-        <div class="cred-item reveal"><div class="cred-num">01</div><div><h4>Elite Driver Safety</h4><p>1.8% driver OOS rate — nearly 4x better than the 6.67% national average.</p></div></div>
-        <div class="cred-item reveal d1"><div class="cred-num">02</div><div><h4>Active Federal Authority</h4><p>USDOT #3491280, MC-1149138. Authorized for interstate, for-hire property transport.</p></div></div>
-        <div class="cred-item reveal d2"><div class="cred-num">03</div><div><h4>Scale &amp; Capacity</h4><p>99 power units and 115 drivers — single loads or multi-truck dedicated contracts.</p></div></div>
-        <div class="cred-item reveal d3"><div class="cred-num">04</div><div><h4>Zero Fatal Crashes</h4><p>0 fatal crashes in the past 24 months across 272 inspections.</p></div></div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-num">01</div><div><h4>Elite Driver Safety Record</h4><p>Our 1.8% driver out-of-service rate is nearly four times better than the 6.67% national average. That's not a number we stumbled into — it's the direct result of rigorous hiring standards, mandatory ongoing training, and a zero-tolerance policy for safety violations.</p></div></div>
+      <div class="why-card"><div class="why-num">02</div><div><h4>Active Federal Operating Authority</h4><p>USDOT #3491280 with MC-1149138 operating authority. We're fully authorized for interstate, for-hire property transport across all 48 contiguous states. Our authority, insurance, and filings are always current — never expired, never lapsed.</p></div></div>
+      <div class="why-card"><div class="why-num">03</div><div><h4>Real Capacity, Not Empty Promises</h4><p>With 99 power units and 115 active drivers, we don't just promise availability — we deliver it. Whether you need a single spot load or a 20-truck dedicated contract, we have the fleet depth to commit and follow through, every week, without exception.</p></div></div>
+      <div class="why-card"><div class="why-num">04</div><div><h4>Versatile Cargo Authorization</h4><p>Not every carrier can handle general freight, motor vehicles, and oversized machinery under one roof. Our FMCSA authorization covers all three, which means you can consolidate your carrier relationships and simplify your logistics with a single trusted partner.</p></div></div>
+      <div class="why-card"><div class="why-num">05</div><div><h4>Responsive, Human Dispatch Team</h4><p>When you call Global Max, a real person answers — not a voicemail tree, not an AI chatbot. Our dispatch team is available Monday through Friday from 7 AM to 7 PM CST, and we respond to quote requests within 2 business hours, not 2 business days.</p></div></div>
+      <div class="why-card"><div class="why-num">06</div><div><h4>Zero Fatal Crashes</h4><p>Over the past 24 months, across 272 roadside inspections and millions of miles driven, Global Max Services has recorded zero fatal crashes. That's a record we work every single day to maintain — because there's no metric in this business that matters more.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Coverage / Service Area -->
+<section class="section section-alt" id="coverage">
+  <div class="container">
+    <div class="coverage-grid">
+      <div class="coverage-text">
+        <div class="section-tag">Service Area</div>
+        <h3>Nationwide Interstate <span>Coverage</span></h3>
+        <p>Global Max Services operates across the entire continental United States under full interstate authority. Our fleet runs the highest-demand corridors daily, with strong lane coverage in the Midwest, Southeast, Southwest, and along both coasts.</p>
+        <p>We maintain consistent capacity on major freight corridors including I-90, I-80, I-40, I-10, I-95, and I-65, as well as regional routes throughout the heartland. Whether your freight is moving from Chicago to Dallas, Atlanta to Los Angeles, or anywhere in between, we can get it there.</p>
+        <a href="#forms" class="btn-amber-outline" style="margin-top:1rem;">Get a Freight Quote</a>
       </div>
-      <div class="fmcsa-card reveal d1">
+      <div>
+        <h4 style="font-family:var(--font-heading);font-size:1.1rem;color:var(--navy);margin-bottom:1rem;">Key Markets We Serve</h4>
+        <div class="coverage-list">
+          <div class="coverage-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Chicago, IL</div>
+          <div class="coverage-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Dallas / Fort Worth, TX</div>
+          <div class="coverage-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Atlanta, GA</div>
+          <div class="coverage-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Los Angeles, CA</div>
+          <div class="coverage-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Houston, TX</div>
+          <div class="coverage-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Indianapolis, IN</div>
+          <div class="coverage-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Nashville, TN</div>
+          <div class="coverage-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Columbus, OH</div>
+          <div class="coverage-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Phoenix, AZ</div>
+          <div class="coverage-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Jacksonville, FL</div>
+          <div class="coverage-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Memphis, TN</div>
+          <div class="coverage-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Charlotte, NC</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Safety Record -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Safety Record</div>
+      <h2 class="section-title">Our Numbers Speak for Themselves</h2>
+      <p class="section-desc">Safety isn't a talking point at Global Max — it's the foundation of everything we do. Every driver, every truck, every mile is held to a standard that goes well beyond federal minimums. The data from our most recent 24-month FMCSA inspection window tells the story.</p>
+    </div>
+    <div class="safety-grid">
+      <div class="safety-card"><div class="safety-big">1.8%</div><div class="safety-label">Driver Out-of-Service Rate</div><div class="safety-sub">National average: 6.67%</div></div>
+      <div class="safety-card"><div class="safety-big">0</div><div class="safety-label">Fatal Crashes in 24 Months</div><div class="safety-sub">Across 15+ million miles</div></div>
+      <div class="safety-card"><div class="safety-big">272</div><div class="safety-label">Total Roadside Inspections</div><div class="safety-sub">24-month inspection window</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Fleet & Equipment -->
+<section class="section" id="fleet">
+  <div class="container">
+    <div class="fleet-grid">
+      <div class="fleet-text">
+        <div class="section-tag">Fleet &amp; Equipment</div>
+        <h3>Modern Equipment, <span>Maintained Rigorously</span></h3>
+        <p>Our fleet consists of 99 power units maintained to standards that exceed federal inspection requirements. Every tractor in our fleet is equipped with electronic logging devices, GPS tracking, and modern safety systems. We don't run junk — our equipment is clean, reliable, and road-ready.</p>
+        <p>Regular preventative maintenance schedules, pre-trip and post-trip inspections, and a dedicated maintenance team ensure that our trucks stay in top condition. That's not just good for safety scores — it means fewer breakdowns, fewer delays, and more consistent on-time delivery for our customers.</p>
+        <div class="fleet-specs">
+          <div class="fleet-spec"><h4>99+</h4><p>Power Units</p></div>
+          <div class="fleet-spec"><h4>115+</h4><p>Active Drivers</p></div>
+          <div class="fleet-spec"><h4>15M</h4><p>Miles Per Year</p></div>
+          <div class="fleet-spec"><h4>100%</h4><p>ELD Equipped</p></div>
+        </div>
+      </div>
+      <div class="fleet-img"><img src="images/hero-road.png" alt="Global Max Services fleet on the road" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FMCSA Credentials -->
+<section class="section section-alt" id="credentials">
+  <div class="container">
+    <div class="creds-grid">
+      <div class="creds-content">
+        <div class="section-tag">Federal Credentials</div>
+        <h3>Verified by the <span>FMCSA</span></h3>
+        <p>Every data point on this page is sourced directly from the Federal Motor Carrier Safety Administration's SAFER database. Our operating authority, inspection records, crash history, and fleet information are all public record — we have nothing to hide and everything to prove.</p>
+        <p>When you work with Global Max, you're working with a carrier whose compliance isn't just current — it's actively maintained. Our MCS-150 biennial update was filed November 2025, our insurance is always current, and our safety record is available for anyone to verify.</p>
+        <div class="creds-highlights">
+          <div class="creds-hl"><div class="creds-hl-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><h4>Active USDOT Status</h4><p>No out-of-service orders, no lapses, no violations</p></div></div>
+          <div class="creds-hl"><div class="creds-hl-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><h4>Current Insurance on File</h4><p>Full liability coverage as required by FMCSA</p></div></div>
+          <div class="creds-hl"><div class="creds-hl-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><h4>Authorized for Property Transport</h4><p>MC-1149138 with interstate for-hire authority</p></div></div>
+        </div>
+      </div>
+      <div class="fmcsa-card">
         <h3>FMCSA Snapshot <span class="fmcsa-verified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Verified</span></h3>
         <div class="fr"><span class="l">USDOT Number</span><span class="v">3491280</span></div>
         <div class="fr"><span class="l">MC Number</span><span class="v">MC-1149138</span></div>
-        <div class="fr"><span class="l">Status</span><span class="v g">ACTIVE</span></div>
-        <div class="fr"><span class="l">Authority</span><span class="v g">Authorized — Property</span></div>
+        <div class="fr"><span class="l">Entity Type</span><span class="v">Carrier</span></div>
+        <div class="fr"><span class="l">USDOT Status</span><span class="v g">ACTIVE</span></div>
+        <div class="fr"><span class="l">Operating Authority</span><span class="v g">Authorized — Property</span></div>
         <div class="fr"><span class="l">Classification</span><span class="v">Auth. For Hire, Interstate</span></div>
         <div class="fr"><span class="l">Power Units</span><span class="v a">99</span></div>
         <div class="fr"><span class="l">Drivers</span><span class="v a">115</span></div>
         <div class="fr"><span class="l">Annual Mileage</span><span class="v a">15,000,000</span></div>
         <div class="fr"><span class="l">Inspections (24 mo)</span><span class="v">272</span></div>
         <div class="fr"><span class="l">Driver OOS Rate</span><span class="v g">1.8%</span></div>
-        <div class="fr"><span class="l">Fatal Crashes</span><span class="v g">0</span></div>
+        <div class="fr"><span class="l">Fatal Crashes (24 mo)</span><span class="v g">0</span></div>
         <div class="fr"><span class="l">Cargo Types</span><span class="v">General, Vehicles, Machinery</span></div>
+        <div class="fr"><span class="l">MCS-150 Filed</span><span class="v">11/29/2025</span></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CTA Banner -->
+<div class="cta-banner">
+  <div class="container">
+    <h2>Ready to Ship? Let's Talk.</h2>
+    <p>Get a competitive freight quote within 2 hours, or apply to drive with one of the safest fleets on the road.</p>
+    <a href="#forms" class="btn-white">Get a Free Quote <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  </div>
+</div>
+
 <!-- Forms -->
-<section class="section section-alt" id="forms">
+<section class="section" id="forms">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag reveal">Get Started</div>
-      <h2 class="section-title reveal d1">Ship with us or join our fleet</h2>
+      <div class="section-tag">Get Started</div>
+      <h2 class="section-title">Ship With Us or Join Our Fleet</h2>
+      <p class="section-desc">Whether you're looking for a reliable carrier for your next shipment or you're an experienced CDL driver looking for a team that values safety and respect, we'd like to hear from you.</p>
     </div>
-    <div class="form-tabs reveal d2">
+    <div class="form-tabs">
       <button class="form-tab active" data-tab="shipping" onclick="switchTab('shipping')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg> Shipping Inquiry</button>
       <button class="form-tab" data-tab="driver" onclick="switchTab('driver')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Driver Application</button>
     </div>
     <div class="form-panel active" id="panel-shipping">
       <div class="form-layout">
         <div class="form-info">
-          <h3>Request a freight quote</h3>
-          <p>Tell us about your shipment. We respond within 2 business hours.</p>
+          <h3>Request a Freight Quote</h3>
+          <p>Tell us about your shipment and our dispatch team will respond within 2 business hours with competitive rates and available capacity.</p>
           <div class="form-info-list">
             <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><span>(630) 948-4754</span></div>
             <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><span>1919 S Highland Ave, Ste B201, Lombard, IL 60148</span></div>
-            <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="75111c06051401161d3512191a17141918140d061007031c1610065b161a18">[email&#160;protected]</a></span></div>
-            <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><span>Mon-Fri 7 AM - 7 PM CST</span></div>
+            <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span>dispatch@globalmaxservices.com</span></div>
+            <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><span>Monday - Friday, 7:00 AM - 7:00 PM CST</span></div>
           </div>
         </div>
         <div class="form-card">
@@ -545,23 +551,23 @@ input, textarea, select { font-family: inherit; }
             <div class="form-row"><div class="fg"><label>Email *</label><input type="email" name="email" required></div><div class="fg"><label>Phone *</label><input type="tel" name="phone" required></div></div>
             <div class="form-row"><div class="fg"><label>Origin</label><input type="text" name="origin" placeholder="City, State or Zip"></div><div class="fg"><label>Destination</label><input type="text" name="destination" placeholder="City, State or Zip"></div></div>
             <div class="form-row"><div class="fg"><label>Cargo Type</label><select name="cargo_type"><option value="">Select...</option><option>General Freight</option><option>Motor Vehicles</option><option>Machinery / Large Objects</option><option>Expedited</option><option>Other</option></select></div><div class="fg"><label>Weight (lbs)</label><input type="text" name="weight" placeholder="e.g. 40,000"></div></div>
-            <div class="form-row full"><div class="fg"><label>Details</label><textarea name="details" placeholder="Dates, special requirements, number of loads..."></textarea></div></div>
+            <div class="form-row full"><div class="fg"><label>Shipment Details</label><textarea name="details" placeholder="Pickup/delivery dates, special requirements, number of loads, etc."></textarea></div></div>
             <button type="submit" class="form-submit">Submit Inquiry</button>
           </form>
-          <div class="form-success" id="shipping-success"><div class="chk"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h4>Quote request received</h4><p>We'll contact you within 2 business hours.</p></div>
+          <div class="form-success" id="shipping-success"><div class="chk"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h4>Quote Request Received</h4><p>Our dispatch team will contact you within 2 business hours.</p></div>
         </div>
       </div>
     </div>
     <div class="form-panel" id="panel-driver">
       <div class="form-layout">
         <div class="form-info">
-          <h3>Join the Global Max team</h3>
-          <p>Competitive pay, modern equipment, consistent miles, and a team that respects the profession.</p>
+          <h3>Join the Global Max Team</h3>
+          <p>We're always looking for experienced, safety-minded CDL drivers who want to work for a company that respects the profession. Competitive pay, modern equipment, consistent miles, and a team that has your back.</p>
           <div class="form-info-list">
-            <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><span>Competitive CPM + bonuses</span></div>
-            <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><span>Late-model equipment</span></div>
-            <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><span>Regular home time</span></div>
-            <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>Full benefits package</span></div>
+            <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><span>Competitive CPM with performance bonuses</span></div>
+            <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><span>Late-model, well-maintained equipment</span></div>
+            <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><span>Regular home time and consistent miles</span></div>
+            <div class="fi"><div class="fi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>Full benefits package including health, dental, vision</span></div>
           </div>
         </div>
         <div class="form-card">
@@ -569,12 +575,12 @@ input, textarea, select { font-family: inherit; }
             <div class="form-row"><div class="fg"><label>Full Name *</label><input type="text" name="name" required></div><div class="fg"><label>Phone *</label><input type="tel" name="phone" required></div></div>
             <div class="form-row"><div class="fg"><label>Email *</label><input type="email" name="email" required></div><div class="fg"><label>City / State *</label><input type="text" name="city_state" required></div></div>
             <div class="form-row"><div class="fg"><label>CDL Class *</label><select name="cdl_class" required><option value="">Select...</option><option>Class A</option><option>Class B</option><option>CDL Permit</option></select></div><div class="fg"><label>Experience *</label><select name="experience" required><option value="">Select...</option><option>Less than 1 year</option><option>1-3 years</option><option>3-5 years</option><option>5-10 years</option><option>10+ years</option></select></div></div>
-            <div class="form-row"><div class="fg"><label>Endorsements</label><input type="text" name="endorsements" placeholder="Hazmat, Tanker, etc."></div><div class="fg"><label>Preferred Freight</label><select name="preferred_freight"><option value="">Select...</option><option>Dry Van</option><option>Flatbed</option><option>Auto Hauler</option><option>No Preference</option></select></div></div>
-            <div class="form-row full"><div class="fg"><label>Accidents / Violations (3 yrs)</label><textarea name="violations" placeholder="'None' if clean record."></textarea></div></div>
-            <div class="form-row full"><div class="fg"><label>Additional Notes</label><textarea name="notes" placeholder="Availability, preferences, etc."></textarea></div></div>
+            <div class="form-row"><div class="fg"><label>Endorsements</label><input type="text" name="endorsements" placeholder="Hazmat, Tanker, Doubles/Triples"></div><div class="fg"><label>Preferred Freight</label><select name="preferred_freight"><option value="">Select...</option><option>Dry Van</option><option>Flatbed</option><option>Auto Hauler</option><option>No Preference</option></select></div></div>
+            <div class="form-row full"><div class="fg"><label>Accidents / Violations (Last 3 Years)</label><textarea name="violations" placeholder="'None' if clean record. Otherwise, please describe."></textarea></div></div>
+            <div class="form-row full"><div class="fg"><label>Additional Notes</label><textarea name="notes" placeholder="Availability, team driving preference, relocation plans, etc."></textarea></div></div>
             <button type="submit" class="form-submit">Submit Application</button>
           </form>
-          <div class="form-success" id="driver-success"><div class="chk"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h4>Application received</h4><p>Our recruiting team will reach out within 24 hours.</p></div>
+          <div class="form-success" id="driver-success"><div class="chk"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h4>Application Received</h4><p>Our recruiting team will reach out within 24 hours.</p></div>
         </div>
       </div>
     </div>
@@ -597,52 +603,24 @@ input, textarea, select { font-family: inherit; }
   <div class="container">
     <div class="footer-inner">
       <img src="images/logo.png" alt="Global Max Services" class="footer-logo">
-      <p class="footer-text">&copy; 2026 Global Max Services LLC. All rights reserved.</p>
-      <div class="footer-links"><a href="#about">About</a><a href="#services">Services</a><a href="#forms">Careers</a><a href="admin.html">Admin</a></div>
+      <p class="footer-text">&copy; 2026 Global Max Services LLC. All rights reserved. USDOT #3491280 &middot; MC-1149138</p>
+      <div class="footer-links"><a href="#about">About</a><a href="#services">Services</a><a href="#coverage">Coverage</a><a href="#credentials">Credentials</a><a href="#forms">Careers</a><a href="admin.html">Admin</a></div>
     </div>
   </div>
 </footer>
 
-<div class="toast" id="toast">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-  <span id="toastText"></span>
-</div>
+<!-- Toast -->
+<div class="toast" id="toast"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span id="toastText"></span></div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 var navToggle = document.getElementById('navToggle');
 var navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', function() { navToggle.classList.toggle('open'); navLinks.classList.toggle('open'); });
+document.querySelectorAll('.nav-links a').forEach(function(a) { a.addEventListener('click', function() { navToggle.classList.remove('open'); navLinks.classList.remove('open'); }); });
 
-navToggle.addEventListener('click', function() {
-  navToggle.classList.toggle('open');
-  navLinks.classList.toggle('open');
-});
-document.querySelectorAll('.nav-links a').forEach(function(a) {
-  a.addEventListener('click', function() { navToggle.classList.remove('open'); navLinks.classList.remove('open'); });
-});
-
-// Slideshow
-var slides = document.querySelectorAll('.hero-slide');
-var cs = 0;
+var slides = document.querySelectorAll('.hero-slide'), cs = 0;
 setInterval(function() { slides[cs].classList.remove('active'); cs = (cs+1)%slides.length; slides[cs].classList.add('active'); }, 5000);
 
-// Reveal animations removed — content always visible
-
-// Counters
-var co = new IntersectionObserver(function(entries) {
-  entries.forEach(function(e) {
-    if (!e.isIntersecting) return;
-    var el = e.target, target = +el.getAttribute('data-target'), start = performance.now();
-    (function step(now) {
-      var p = Math.min((now - start) / 2000, 1);
-      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
-      if (p < 1) requestAnimationFrame(step);
-    })(start);
-    co.unobserve(el);
-  });
-}, { threshold: 0.5 });
-document.querySelectorAll('.counter').forEach(function(c) { co.observe(c); });
-
-// Tabs
 function switchTab(t) {
   document.querySelectorAll('.form-tab').forEach(function(x) { x.classList.remove('active'); });
   document.querySelectorAll('.form-panel').forEach(function(x) { x.classList.remove('active'); });
@@ -651,7 +629,6 @@ function switchTab(t) {
   if (t==='driver') document.getElementById('forms').scrollIntoView({behavior:'smooth'});
 }
 
-// Submit
 async function submitForm(e, type) {
   e.preventDefault();
   var f = e.target, btn = f.querySelector('.form-submit');
@@ -669,6 +646,9 @@ async function submitForm(e, type) {
 }
 function showToast(m){var t=document.getElementById('toast');document.getElementById('toastText').textContent=m;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},3000);}
 
-// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
-  a.a
+  a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-90,behavior:'smooth'});}});
+});
+</script>
+</body>
+</html>
