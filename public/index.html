@@ -705,4 +705,8 @@ async function submitForm(e, type) {
 function showToast(m){var t=document.getElementById('toast');document.getElementById('toastText').textContent=m;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},3000);}
 
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
-  a.a
+  a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-90,behavior:'smooth'});}});
+});
+</script>
+</body>
+</html>
