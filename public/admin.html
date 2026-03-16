@@ -72,6 +72,55 @@ tr:hover td{background:rgba(232,134,12,.03)}
 .btn-mark-reviewed{background:rgba(34,197,94,.15);border:1px solid var(--success);color:var(--success)}.btn-mark-reviewed:hover{background:var(--success);color:var(--navy)}
 .btn-archive{background:rgba(100,116,139,.1);border:1px solid var(--gray-500);color:var(--gray-400)}.btn-archive:hover{background:var(--gray-500);color:var(--white)}
 .btn-delete{background:rgba(239,68,68,.1);border:1px solid var(--danger);color:var(--danger)}.btn-delete:hover{background:var(--danger);color:var(--white)}
+
+/* ── MOBILE OPTIMIZATION ── */
+@media (max-width: 768px) {
+  .login-card { padding: 2rem 1.5rem; }
+  .login-card img { height: 36px; }
+  .login-card h2 { font-size: 1.2rem; }
+
+  .topbar { padding: 0.6rem 1rem; flex-wrap: wrap; gap: 0.5rem; }
+  .topbar-left { gap: 0.8rem; }
+  .topbar-left img { height: 26px; }
+  .topbar-left h1 { font-size: 0.78rem; }
+  .topbar-badge { display: none; }
+  .topbar-logout { padding: 0.3rem 0.7rem; font-size: 0.72rem; }
+
+  .dash-body { padding: 1rem; }
+  .summary-card { padding: 1rem; }
+  .summary-card .number { font-size: 1.5rem; }
+  .summary-card .label { font-size: 0.65rem; }
+
+  .dash-tabs { max-width: 100%; }
+  .dash-tab { padding: 0.6rem 0.8rem; font-size: 0.72rem; }
+
+  .filter-bar { gap: 0.6rem; }
+  .filter-bar input { min-width: 100%; }
+  .filter-bar select { width: 100%; }
+  .refresh-btn { width: 100%; text-align: center; }
+  .export-btn { margin-left: 0; width: 100%; text-align: center; }
+
+  .table-wrap { border-radius: 8px; }
+  table { min-width: 650px; }
+  th, td { padding: 0.6rem 0.7rem; font-size: 0.78rem; }
+  .action-btn { padding: 0.25rem 0.5rem; font-size: 0.68rem; }
+
+  .modal-overlay { padding: 1rem; }
+  .modal { padding: 1.5rem; border-radius: 12px; }
+  .modal h3 { font-size: 0.9rem; margin-bottom: 1rem; }
+  .modal-row { flex-direction: column; gap: 0.2rem; }
+  .modal-row .lbl { white-space: normal; }
+  .modal-row .val { text-align: left; max-width: 100%; }
+  .modal-actions { flex-direction: column; gap: 0.5rem; }
+  .modal-actions button { padding: 0.6rem; font-size: 0.75rem; }
+}
+
+@media (max-width: 420px) {
+  .topbar-left h1 { display: none; }
+  .summary-card .number { font-size: 1.3rem; }
+  table { min-width: 550px; }
+  th, td { padding: 0.5rem; font-size: 0.72rem; }
+}
 </style>
 </head>
 <body>
